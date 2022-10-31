@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class MouseLook : MonoBehaviour
 {
-    [SerializeField] float sensitivityX = 8f;
+    [SerializeField] float sensitivityX = 100f;
     [SerializeField] float sensitivityY = 0.5f;
     float mouseX, mouseY;
 
