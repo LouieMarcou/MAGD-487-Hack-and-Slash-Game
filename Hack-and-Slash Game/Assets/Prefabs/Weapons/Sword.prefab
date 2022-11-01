@@ -50,7 +50,12 @@ MonoBehaviour:
     damage: 0
     timeToAttack: 0
   timeToAttack: 1
+  speed: 2
   playerController: {fileID: 0}
+  animationClips:
+  - {fileID: 7400000, guid: f27f7b60b09ebbd4c87051954df4e948, type: 2}
+  - {fileID: 7400000, guid: 1f6e122a414d7484d800c5907b42faae, type: 2}
+  - {fileID: 7400000, guid: 1475544e7bb532443af68893e87f568e, type: 2}
 --- !u!1001 &6809856264133952821
 PrefabInstance:
   m_ObjectHideFlags: 0

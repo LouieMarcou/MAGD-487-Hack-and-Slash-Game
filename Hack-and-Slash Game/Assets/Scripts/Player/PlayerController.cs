@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
         controller.enabled = true;
         currentStamina = staminaMax;
+
+        healthMax = health;
     }
 
     // Start is called before the first frame update
@@ -81,7 +83,6 @@ public class PlayerController : MonoBehaviour
         isAttacking = context.action.triggered;
         if(isAttacking)
         {
-            Debug.Log("attack");
             Weapon.GetComponent<WeaponBase>().Attack();
             
             
@@ -204,7 +205,10 @@ public class PlayerController : MonoBehaviour
         staminaRegen = null;
     }
 
-
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+    }
 
 
     //Sets Weapon

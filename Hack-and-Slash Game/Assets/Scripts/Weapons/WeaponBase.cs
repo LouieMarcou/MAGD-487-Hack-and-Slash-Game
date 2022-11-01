@@ -10,17 +10,18 @@ public abstract class WeaponBase : MonoBehaviour
     private WeaponStats orginialWeaponStats;
 
     public float timeToAttack = 1f;
+    public float speed;
     
 
     public PlayerController playerController;
 
     public Coroutine attackWait;
-    private WaitForSeconds timer;
+    public WaitForSeconds timer;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        timer = new WaitForSeconds(timeToAttack/10);
+        timer = new WaitForSeconds(timeToAttack);
+        
     }
 
     public virtual void StoreOrginialData(WeaponData wd)
@@ -44,12 +45,16 @@ public abstract class WeaponBase : MonoBehaviour
     public IEnumerator StartAttackWait(string animationName)
     {
         //Debug.Log("Wait started");
+        
         yield return timer;
 
-        attackWait = null;
+        //attackWait = null;
+
         playerController.GetAnimator().SetBool(animationName, false);
         //Debug.Log("Wait Over");
     }
+
+    public abstract IEnumerator AttackDelay();
 
     public abstract void Attack();
 }
