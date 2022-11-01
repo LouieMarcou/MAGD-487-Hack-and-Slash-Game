@@ -42,7 +42,7 @@ public abstract class WeaponBase : MonoBehaviour
         weaponStats = new WeaponStats(wd.stats.damage, wd.stats.timeToAttack);
     }
 
-    public IEnumerator StartAttackWait(string animationName)
+    public IEnumerator StartAttackWait(string animationName)//may not need this anymore
     {
         //Debug.Log("Wait started");
         

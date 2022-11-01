@@ -5,5 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Wave : ScriptableObject
 {
-    
+ 	public string WaveName;
+	public ObjectPool EnemyObjectPool;
+ 
 }

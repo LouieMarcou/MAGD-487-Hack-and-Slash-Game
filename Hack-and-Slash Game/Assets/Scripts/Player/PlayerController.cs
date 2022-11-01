@@ -28,10 +28,12 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float health = 100f;
     private float healthMax;
-
+	private Coroutine healthRegen;
+	private WaitForSeconds healthRegenTick = new WaitForSeconds(5f);//varaible needs testing
+	public Slider healthBar;
 
     private Coroutine staminaRegen;
-    private WaitForSeconds staminaRegentick = new WaitForSeconds(0.05f);
+    private WaitForSeconds staminaRegenTick = new WaitForSeconds(0.05f);
     private WaitForSeconds staminaRegenWait = new WaitForSeconds(2f);
     private float staminaMax = 100f;
     private float currentStamina;
@@ -128,7 +130,10 @@ public class PlayerController : MonoBehaviour
         groundedPlayer = controller.isGrounded;
         if (isSprinting)
             UpdateStamina();
-
+		if(health < healthMax)
+		{
+			healthRegen = StartCoroutine(RegenHealth());
+		}
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
@@ -200,14 +205,31 @@ public class PlayerController : MonoBehaviour
         {
             currentStamina += staminaMax / 100;
             staminaBar.value = currentStamina;
-            yield return staminaRegentick;
+            yield return staminaRegenTick;
         }
         staminaRegen = null;
     }
+	
+	private void UpdateHealth()
+	{
+		
+	}
+	
+	private IEnumerator RegenHealth()
+	{
+		while(health < healthMax)
+		{
+			health += 2f;//variable needs testing
+			healthBar.value = health;
+			yield return healthRegenTick;
+		}
+		healthRegen = null;
+	}
 
     public void TakeDamage(float damage)
     {
         health -= damage;
+		healthBar.value = health;
     }
 
 

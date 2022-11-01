@@ -9,20 +9,44 @@ public class Sword : WeaponBase
     private bool inAnimation;
 
     private int timesAttacked;
+	
+	
+	private bool canReturn;
+	private float returnTimer = 0.1f;//variable needs testing
+	private float t = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log(animationClips[0].length);
         playerController.GetAnimator().speed = speed;
         timer = new WaitForSeconds(timeToAttack/speed);
+		t = returnTimer;
 
     }
+	
+	//If canReturn is true the returnTimer will run until 0 and once it hits 0 the sword return animation will run and reset the returnTimer
+	void Update()
+	{
+		if(canReturn)
+		{
+			returnTimer -= Time.deltaTime;
+			if(returnTimer <= 0)
+			{
+				Debug.Log("Able to return to starting position");
+				SwordReturn();
+				returnTimer = t;
+				canReturn = false;
+			}
+		}
+	}
 
-    //make animation play
+    //make animation play, animation will not play if a animation is already playing
+	//if the bool that transitions to the first attack animation is not playing and the player has attacked 0 times, 
+	//it will set the transition bool and inAnimation bool = true. Then a coroutine will run whichs prevents the player from attacking again
+	//if the transition bool used in the first clip is true and you have attacked already the transition bool for the second animaiton and inAnimation will be set to true and the coroutine will run
     public override void Attack()
     {
-        
+        //Problem:Spamming attacks stops the return animation
         if(inAnimation == false)
         {
             
@@ -31,7 +55,7 @@ public class Sword : WeaponBase
                 Debug.Log("attack 1");
                 playerController.GetAnimator().SetBool("Sword Attack 1", true);//transitions to Sword attack 1 animation
                 inAnimation = true;
-
+				
                 StartCoroutine(AttackDelay());
             }
             else if(playerController.GetAnimator().GetBool("Sword Attack 1") && timesAttacked == 1)
@@ -44,18 +68,22 @@ public class Sword : WeaponBase
             }
             
         }
-
+		
         else if(inAnimation)
         {
             Debug.Log("cannot attack");
         }
     }
 
+	//Coroutine that prevents the player from attacking before an animation is over
+	//If the player does not attack in the time window canReturn will be set true so the sword will return to the original position
+	//timesAttacked will increase AFTER the time has run so that player can't spam attacks
+	//if the player has reached the max amount on consecutive attakcs it will reset the animations
     public override IEnumerator AttackDelay()
     {
 
         yield return timer;
-
+		canReturn = true;
         inAnimation = false;
         timesAttacked++;
         if(timesAttacked == 2)
@@ -64,6 +92,7 @@ public class Sword : WeaponBase
         }
     }
 
+	//Resets sword attack animations and timesAttacked to run the sword Return animation
     private void SwordReturn()
     {
         playerController.GetAnimator().SetBool("Sword Attack 1", false);
