@@ -35,4 +35,9 @@ public class EnemyBase : MonoBehaviour
 
         enemyStats = new EnemyStats(ed.stats.health, ed.stats.damage, ed.stats.speed, ed.stats.timeToAttack);
     }
+
+    public void TakeDamage(float damage)
+    {
+        enemyData.stats.health -= damage;
+    }
 }

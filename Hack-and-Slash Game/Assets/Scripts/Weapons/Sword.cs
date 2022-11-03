@@ -32,7 +32,7 @@ public class Sword : WeaponBase
 			returnTimer -= Time.deltaTime;
 			if(returnTimer <= 0)
 			{
-				Debug.Log("Able to return to starting position");
+				//Debug.Log("Able to return to starting position");
 				SwordReturn();
 				returnTimer = t;
 				canReturn = false;
@@ -49,21 +49,21 @@ public class Sword : WeaponBase
         //Problem:Spamming attacks stops the return animation
         if(inAnimation == false)
         {
-            
+            Collider[] colliders = Physics.OverlapBox(transform.position, transform.localScale / 2, Quaternion.identity, 7);
+            ApplyDamage(colliders);
             if(playerController.GetAnimator().GetBool("Sword Attack 1") == false && timesAttacked == 0)
             {
-                Debug.Log("attack 1");
+                //Debug.Log("attack 1");
                 playerController.GetAnimator().SetBool("Sword Attack 1", true);//transitions to Sword attack 1 animation
                 inAnimation = true;
-				
+                
                 StartCoroutine(AttackDelay());
             }
             else if(playerController.GetAnimator().GetBool("Sword Attack 1") && timesAttacked == 1)
             {
-                Debug.Log("attack 2");
+                //Debug.Log("attack 2");
                 playerController.GetAnimator().SetBool("Sword Attack 2", true);//transitions to Sword attack 2 animation
                 inAnimation = true;
-
                 StartCoroutine(AttackDelay());
             }
             
@@ -71,7 +71,7 @@ public class Sword : WeaponBase
 		
         else if(inAnimation)
         {
-            Debug.Log("cannot attack");
+            //Debug.Log("cannot attack");
         }
     }
 
@@ -98,5 +98,23 @@ public class Sword : WeaponBase
         playerController.GetAnimator().SetBool("Sword Attack 1", false);
         playerController.GetAnimator().SetBool("Sword Attack 2", false);
         timesAttacked = 0;
+    }
+
+
+    private void ApplyDamage(Collider[] colliders)
+    {
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            //only registers if incredibly close. Need to fix
+            Debug.Log(colliders[i].gameObject.name);
+            if (colliders[i].GetComponent<EnemyBase>())
+            {
+                //totalDamage = Random.Range(0.7f, 1.3f) * weaponStats.damage * p.playerData.playerStats.DamageModifier;
+                //totalDamage = Mathf.Ceil(totalDamage);
+                //Debug.Log(totalDamage);
+                //colliders[i].GetComponent<EnemyBase>().TakeDamage(totalDamage);
+                colliders[i].GetComponent<EnemyBase>().TakeDamage(weaponData.stats.damage);
+            }
+        }
     }
 }

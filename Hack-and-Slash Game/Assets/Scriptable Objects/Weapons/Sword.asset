@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5d1e135cf854c42854652d1fba65ae, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Sword
   stats:
     damage: 10
     timeToAttack: 0.7
