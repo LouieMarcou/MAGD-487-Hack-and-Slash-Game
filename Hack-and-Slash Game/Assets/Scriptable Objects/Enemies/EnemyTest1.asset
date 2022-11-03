@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: EnemyTest1
   m_EditorClassIdentifier: 
   Name: Footman
-  enemyStats:
+  stats:
     health: 10
-    damage: 5
-    speed: 10
+    damage: 0
+    speed: 0
+    timeToAttack: 0
   EnemyBasePrefab: {fileID: 4158657067635785813, guid: b30f1b0ca784e4b6fbea6a46acec1100, type: 3}

@@ -12,6 +12,8 @@ public class EnemyBase : MonoBehaviour
 	
 	private float timeToAttack;
 	
+	private float currentHealth;
+	
 	void Awake()
 	{
 		player = GameObject.Find("Player");
@@ -19,7 +21,7 @@ public class EnemyBase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = enemyData.stats.health;
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class EnemyBase : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        enemyData.stats.health -= damage;
+        currentHealth -= damage;
+		Debug.Log(currentHealth);
     }
 }
