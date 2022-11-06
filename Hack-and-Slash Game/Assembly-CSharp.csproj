@@ -56,15 +56,24 @@
     <Compile Include="Assets\Scripts\Enemies\EnemyBase.cs" />
     <Compile Include="Assets\Scripts\Player\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponManager.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyManager.cs" />
+    <Compile Include="Assets\Scripts\Collectable\HealthDrop.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponBase.cs" />
     <Compile Include="Assets\Scripts\Upgrades\UpgradeData.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Upgrades\UpgradeManager.cs" />
     <Compile Include="Assets\Scripts\Enemies\Set.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Special\Thorns.cs" />
+    <Compile Include="Assets\Scripts\EnemyObjectPool.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponData.cs" />
+    <Compile Include="Assets\Scripts\Scriptable Objects\Weapons.cs" />
+    <Compile Include="Assets\Scripts\CollisionDetection.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Wave.cs" />
+    <Compile Include="Assets\Scripts\Enemies\WaveData.cs" />
+    <Compile Include="Assets\Scripts\Player\MouseLookVersion2.cs" />
+    <Compile Include="Assets\Scripts\Collectable\Item.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Weapons\Sword.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyData.cs" />
   </ItemGroup>

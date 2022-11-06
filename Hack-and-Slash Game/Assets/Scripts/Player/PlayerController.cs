@@ -75,6 +75,9 @@ public class PlayerController : MonoBehaviour
     //Looking around with the mouse function
     public void OnLook(InputAction.CallbackContext context)
     {
+        //if(context.action.triggered)
+        //    mouseInput = context.ReadValue<Vector2>();
+        
         mouseInput = context.ReadValue<Vector2>();
     }
 
@@ -130,10 +133,6 @@ public class PlayerController : MonoBehaviour
         groundedPlayer = controller.isGrounded;
         if (isSprinting)
             UpdateStamina();
-		if(health < healthMax)
-		{
-			healthRegen = StartCoroutine(RegenHealth());
-		}
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
@@ -212,8 +211,17 @@ public class PlayerController : MonoBehaviour
 	
 	private void UpdateHealth()
 	{
-		
-	}
+        if (health < healthMax)
+        {
+            //Debug.Log("Updating health");
+            healthBar.value = health;
+            if (healthRegen != null)
+            {
+                StopCoroutine(healthRegen);
+            }
+            healthRegen = StartCoroutine(RegenHealth());
+        }
+    }
 	
 	private IEnumerator RegenHealth()
 	{
@@ -226,10 +234,24 @@ public class PlayerController : MonoBehaviour
 		healthRegen = null;
 	}
 
-    public void TakeDamage(float damage)
+    //Subtracts damage from player health
+    public void TakeDamage(float damage, GameObject enemy)
     {
         health -= damage;
 		healthBar.value = health;
+        if(upgrades.Count > 0)
+        {
+            foreach(UpgradeData ud in upgrades)
+            {
+                if(ud.Name == "Thorns")
+                {
+                    //Debug.Log(enemy.GetComponent<EnemyBase>().currentHealth);
+                    ud.UpgradeBasePrefab.GetComponent<Thorns>().ReflectDamage(enemy.GetComponent<EnemyBase>());
+                    //Debug.Log("Damage reflected");
+                    //Debug.Log(enemy.GetComponent<EnemyBase>().currentHealth);
+                }
+            }
+        }
     }
 
 
@@ -244,4 +266,15 @@ public class PlayerController : MonoBehaviour
     {
         return animator;
     }
+
+    public void AddUpgrade(UpgradeData ud)
+    {
+        upgrades.Add(ud);
+    }
+
+    public WeaponBase GetWeapon()
+    {
+        return Weapon.GetComponent<WeaponBase>();
+    }
+
 }

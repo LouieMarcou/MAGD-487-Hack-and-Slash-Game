@@ -8,9 +8,6 @@ public abstract class WeaponBase : MonoBehaviour
 
     public WeaponStats weaponStats;
     private WeaponStats orginialWeaponStats;
-
-    public float timeToAttack = 1f;
-    public float speed;
     
 
     public PlayerController playerController;
@@ -18,43 +15,29 @@ public abstract class WeaponBase : MonoBehaviour
     public Coroutine attackWait;
     public WaitForSeconds timer;
 
+    public bool isAttacking = false;
+
     void Awake()
     {
-        timer = new WaitForSeconds(timeToAttack);
+        timer = new WaitForSeconds(weaponData.stats.timeToAttack);
         
     }
 
     public virtual void StoreOrginialData(WeaponData wd)
     {
         weaponData = wd;
-        timeToAttack = weaponData.stats.timeToAttack;
-        //timeToAttack = timeToAttack * playerData.playerStats.CooldownModifier;
 
-        orginialWeaponStats = new WeaponStats(wd.stats.damage, wd.stats.timeToAttack);
+        orginialWeaponStats = new WeaponStats(wd.stats.damage, wd.stats.timeToAttack, wd.stats.speed);
     }
 
     public virtual void SetData(WeaponData wd)
     {
         weaponData = wd;
-        timeToAttack = weaponData.stats.timeToAttack;
-        //timeToAttack = timeToAttack * playerData.playerStats.CooldownModifier;
 
-        weaponStats = new WeaponStats(wd.stats.damage, wd.stats.timeToAttack);
+        weaponStats = new WeaponStats(wd.stats.damage, wd.stats.timeToAttack, wd.stats.speed);
     }
 
-    public IEnumerator StartAttackWait(string animationName)//may not need this anymore
-    {
-        //Debug.Log("Wait started");
-        
-        yield return timer;
-
-        //attackWait = null;
-
-        playerController.GetAnimator().SetBool(animationName, false);
-        //Debug.Log("Wait Over");
-    }
-
-    public abstract IEnumerator AttackDelay();
+    public abstract IEnumerator AttackCooldown();
 
     public abstract void Attack();
 }

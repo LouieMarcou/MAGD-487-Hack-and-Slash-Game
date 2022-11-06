@@ -15,5 +15,6 @@ MonoBehaviour:
   Name: Sword
   stats:
     damage: 10
-    timeToAttack: 0.7
+    timeToAttack: 1
+    speed: 2
   weaponBasePrefab: {fileID: 6809856265213747435, guid: a801782fdc48c7b42b38bc7dd3d45394, type: 3}

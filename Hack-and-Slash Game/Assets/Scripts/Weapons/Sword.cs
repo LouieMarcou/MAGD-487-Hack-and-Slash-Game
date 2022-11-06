@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Sword : WeaponBase
 {
-	private bool canAttack;
-	
+	private bool canAttack;	
 	
     // Start is called before the first frame update
     void Start()
     {
-        playerController.GetAnimator().speed = speed;
-        timer = new WaitForSeconds(timeToAttack/speed);
-		canAttack = true;
+        playerController.GetAnimator().speed = weaponData.stats.speed;
+        timer = new WaitForSeconds(weaponData.stats.timeToAttack / weaponData.stats.speed);
+        //timer = new WaitForSeconds(weaponData.stats.timeToAttack);
+        //Debug.Log(weaponData.stats.timeToAttack / weaponData.stats.speed);
+        //playerController.GetAnimator().SetFloat("Speed", weaponData.stats.speed);
+        canAttack = true;
 
     }
 	
@@ -24,40 +26,30 @@ public class Sword : WeaponBase
 
     public override void Attack()
     {
-		
-		if(canAttack)
-		{
-			canAttack = false;
-			Collider[] colliders = Physics.OverlapBox(transform.position, transform.localScale, Quaternion.identity, 7);
-        	ApplyDamage(colliders);
-			playerController.GetAnimator().SetBool("Sword Attack 1",true);//transitions to Sword attack 1 animation
-			StartCoroutine(AttackDelay());
-		}
+        if (canAttack)
+        {
+            isAttacking = true;
+            canAttack = false;
+            //playerController.GetAnimator().SetBool("Sword Attack 1",true);//transitions to Sword attack 1 animation
+            playerController.GetAnimator().SetTrigger("Attack");//transitions to Sword attack 1 animation
+            StartCoroutine(AttackCooldown());
+        }
+        else
+            Debug.Log("can't attack");
     }
 
-    public override IEnumerator AttackDelay()
+    public override IEnumerator AttackCooldown()
     {
-		
+        StartCoroutine(ResetAttackBool());
         yield return timer;
         canAttack = true;
-		playerController.GetAnimator().SetBool("Sword Attack 1", false);
+		//playerController.GetAnimator().SetBool("Sword Attack 1", false);
     }
 
-
-    private void ApplyDamage(Collider[] colliders)
+    IEnumerator ResetAttackBool()
     {
-        for (int i = 0; i < colliders.Length; i++)
-        {
-            //only registers if incredibly close. Need to fix
-            Debug.Log(colliders[i].gameObject.name);
-            if (colliders[i].GetComponent<EnemyBase>())
-            {
-                //totalDamage = Random.Range(0.7f, 1.3f) * weaponStats.damage * p.playerData.playerStats.DamageModifier;
-                //totalDamage = Mathf.Ceil(totalDamage);
-                //Debug.Log(totalDamage);
-                //colliders[i].GetComponent<EnemyBase>().TakeDamage(totalDamage);
-                colliders[i].GetComponent<EnemyBase>().TakeDamage(weaponData.stats.damage);
-            }
-        }
+        yield return timer;
+        isAttacking = false;
     }
+
 }

@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class HealthDrop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float healthAmount = 10f;
 
-    // Update is called once per frame
-    void Update()
+    public float GetHealthAmount()
     {
-        
+        return healthAmount;
     }
 }

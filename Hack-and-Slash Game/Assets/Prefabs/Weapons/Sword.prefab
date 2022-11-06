@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6809856265213747434}
   - component: {fileID: -6652630927149558145}
+  - component: {fileID: 3218789039423893730}
+  - component: {fileID: 1602070047448601137}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -49,13 +51,37 @@ MonoBehaviour:
   weaponStats:
     damage: 0
     timeToAttack: 0
+    speed: 0
   timeToAttack: 1
-  speed: 2
+  speed: 1
   playerController: {fileID: 0}
-  animationClips:
-  - {fileID: 7400000, guid: f27f7b60b09ebbd4c87051954df4e948, type: 2}
-  - {fileID: 7400000, guid: 1f6e122a414d7484d800c5907b42faae, type: 2}
-  - {fileID: 7400000, guid: 1475544e7bb532443af68893e87f568e, type: 2}
+  isAttacking: 0
+--- !u!65 &3218789039423893730
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6809856265213747435}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 2}
+  m_Center: {x: 0, y: 0, z: 1}
+--- !u!114 &1602070047448601137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6809856265213747435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75af5c1bf0c2c4948a2351bf2108c236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wp: {fileID: -6652630927149558145}
 --- !u!1001 &6809856264133952821
 PrefabInstance:
   m_ObjectHideFlags: 0
