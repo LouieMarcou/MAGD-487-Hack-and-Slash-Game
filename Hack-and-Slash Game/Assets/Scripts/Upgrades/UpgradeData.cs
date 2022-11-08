@@ -18,5 +18,6 @@ public class UpgradeData : ScriptableObject
     public UpgradeType upgradeType;
     public GameObject UpgradeBasePrefab;
     public float uniqueNumber;
-    [SerializeField] private string UpgradeText;
+    public Sprite icon;
+    public string UpgradeText;
 }

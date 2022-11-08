@@ -40,4 +40,20 @@ public abstract class WeaponBase : MonoBehaviour
     public abstract IEnumerator AttackCooldown();
 
     public abstract void Attack();
+
+    private void OnDisable()
+    {
+        if (orginialWeaponStats != null)
+        {
+            Debug.Log(gameObject);
+            weaponData.stats = orginialWeaponStats;
+
+            //weaponData.stats.damage = orginialWeaponStats.damage;
+            //weaponData.stats.timeToAttack = orginialWeaponStats.timeToAttack;
+            //weaponData.stats.AttackSize = orginialWeaponStats.AttackSize;
+            //weaponData.stats.range = orginialWeaponStats.range;
+            //weaponData.stats.speed = orginialWeaponStats.speed;
+        }
+
+    }
 }

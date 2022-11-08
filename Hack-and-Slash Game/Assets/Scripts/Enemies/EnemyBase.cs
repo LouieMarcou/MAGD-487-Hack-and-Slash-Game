@@ -17,14 +17,17 @@ public class EnemyBase : MonoBehaviour
     private WaitForSeconds attackTime;
     private bool canAttack = true;
 
-	void Awake()
+    public EnemyManager enemyManager;
+
+    void Awake()
 	{
 		player = GameObject.Find("Player");
         SetData(enemyData);
         objectPool = GameObject.Find(enemyData.Name + "ObjectPool").GetComponent<EnemyObjectPool>();
         attackTime = new WaitForSeconds(enemyData.stats.timeToAttack);
+        enemyManager = GameObject.Find("Game Manager").GetComponent<EnemyManager>();
         //Debug.Log(GetObjectPool());
-	}
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +44,9 @@ public class EnemyBase : MonoBehaviour
         }
         else if(currentHealth <= 0)
         {
+            AddToKillCount();
             gameObject.SetActive(false);
+            
         }
     }
 	
@@ -92,4 +97,8 @@ public class EnemyBase : MonoBehaviour
         canAttack = true;
     }
 
+    private void AddToKillCount()
+    {
+        enemyManager.GetCurrentWave().KillCount++;
+    }
 }

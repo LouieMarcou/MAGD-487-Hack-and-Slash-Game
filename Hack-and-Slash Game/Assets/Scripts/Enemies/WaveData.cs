@@ -9,6 +9,7 @@ public class WaveData : ScriptableObject
     public List<EnemyData> EnemyTypes;
     public List<int> EnemyAmountForEachType;
     private int TotalEnemies;
+    public int KillCount;
 
     public void CalculateTotalEnemies()
     {
@@ -26,5 +27,6 @@ public class WaveData : ScriptableObject
     void OnDisable()
     {
         TotalEnemies = 0;
+        KillCount = 0;
     }
 }

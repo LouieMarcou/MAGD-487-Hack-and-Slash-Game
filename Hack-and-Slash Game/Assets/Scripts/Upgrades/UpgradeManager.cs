@@ -6,11 +6,12 @@ public class UpgradeManager : MonoBehaviour
 {
     [SerializeField] private PlayerController player;
 
-    [SerializeField] private GameObject upgradePanel;
+    [SerializeField] private UpgradePanelManager upgradePanel;
 
     [SerializeField] Transform upgradeObjectsContainer;
 
     [SerializeField] List<UpgradeData> avalibleUpgrades;
+    List<UpgradeData> selectedUpgrades;
 
 
     // Start is called before the first frame update
@@ -25,6 +26,14 @@ public class UpgradeManager : MonoBehaviour
         
     }
 
+    public void Upgrade(int selectedUpgradeId)
+    {
+        UpgradeData upgradeData = selectedUpgrades[selectedUpgradeId];
+
+
+
+    }
+
     public void AddUpgrade(UpgradeData upgradeData)
     {
         GameObject upgradeGameObject = Instantiate(upgradeData.UpgradeBasePrefab, upgradeObjectsContainer);
@@ -35,7 +44,7 @@ public class UpgradeManager : MonoBehaviour
 
                 break;
             case UpgradeType.Weapon:
-
+                upgradeGameObject.GetComponent<WeaponBuff>().ApplyEffects(player.GetWeapon());
                 break;
             case UpgradeType.Special:
 
@@ -43,5 +52,34 @@ public class UpgradeManager : MonoBehaviour
         }
 
         player.GetComponent<PlayerController>().AddUpgrade(upgradeData);
+    }
+
+    public void Run()
+    {
+        if (selectedUpgrades == null)
+        {
+            selectedUpgrades = new List<UpgradeData>();
+        }
+        selectedUpgrades.Clear();
+        selectedUpgrades.AddRange(GetUpgrades(3));
+
+        upgradePanel.OpenPanel(GetUpgrades(3));
+    }
+
+    public List<UpgradeData> GetUpgrades(int count)
+    {
+        List<UpgradeData> upgradeList = new List<UpgradeData>();
+        if (count > avalibleUpgrades.Count)
+        {
+            count = avalibleUpgrades.Count;
+        }
+        for (int i = 0; i < count; i++)
+        {
+            //upgradeList.Add(upgrades[Random.Range(0, upgrades.Count)]);
+            upgradeList.Add(avalibleUpgrades[i]);
+        }
+
+
+        return upgradeList;
     }
 }

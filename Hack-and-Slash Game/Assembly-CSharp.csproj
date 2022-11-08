@@ -76,6 +76,9 @@
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Weapons\Sword.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyData.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\Weapon Buff.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\UpgradePanelManager.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\UpgradeButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
