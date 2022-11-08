@@ -47,10 +47,16 @@ public class EnemyManager : MonoBehaviour
     {
         Debug.Log("starting wave " + (waveCount + 1) );
         currentWave.CalculateTotalEnemies();
-        GameObject obj;
-        obj = GameObject.Find((currentWave.EnemyTypes[0].EnemyBasePrefab.name + "ObjectPool"));
-        obj.GetComponent<EnemyObjectPool>().SetCanSpawn(true);
-        obj.GetComponent<EnemyObjectPool>().SetAmountOfEnemiesToSpawn(currentWave.GetTotalEnemies());
+        
+		for(int i = 0; i < currentWave.EnemyAmountForEachType.Count; i++)
+		{
+			GameObject obj;
+        	obj = GameObject.Find((currentWave.EnemyTypes[i].EnemyBasePrefab.name + "ObjectPool"));
+        	obj.GetComponent<EnemyObjectPool>().SetCanSpawn(true);
+			obj.GetComponent<EnemyObjectPool>().SetAmountOfEnemiesToSpawn(currentWave.EnemyAmountForEachType[i]);	
+		
+		}
+        
     }
 
     public void ResetTimer()

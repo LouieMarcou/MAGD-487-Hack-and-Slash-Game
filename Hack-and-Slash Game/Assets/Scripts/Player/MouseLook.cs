@@ -11,12 +11,17 @@ public class MouseLook : MonoBehaviour
     float xRotation = 0f;
     public Vector3 targetRotation;
 
+	private void Awake()
+	{
+		Cursor.lockState = CursorLockMode.Confined;
+	}
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
         //Cursor.visible = false;        
     }
+	
     private void Update()
     {
         transform.Rotate(Vector3.up, mouseX * Time.deltaTime);

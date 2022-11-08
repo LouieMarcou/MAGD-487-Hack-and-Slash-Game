@@ -15,5 +15,5 @@ MonoBehaviour:
   WaveName: Wave 1
   EnemyTypes:
   - {fileID: 11400000, guid: 1bdee8dab35054aeab496d8bfc2ddd1c, type: 2}
-  EnemyAmountForEachType: 05000000
-  TotalEnemies: 0
+  EnemyAmountForEachType: 01000000
+  KillCount: 7

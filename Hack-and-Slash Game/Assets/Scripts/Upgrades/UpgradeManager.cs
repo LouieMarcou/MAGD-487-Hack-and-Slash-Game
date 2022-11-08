@@ -29,6 +29,7 @@ public class UpgradeManager : MonoBehaviour
     public void Upgrade(int selectedUpgradeId)
     {
         UpgradeData upgradeData = selectedUpgrades[selectedUpgradeId];
+		avalibleUpgrades.RemoveAt(selectedUpgradeId);
 
         AddUpgrade(upgradeData);
 
@@ -41,7 +42,8 @@ public class UpgradeManager : MonoBehaviour
         switch(upgradeData.upgradeType)
         {
             case UpgradeType.Player:
-
+				upgradeGameObject.GetComponent<PlayerFlatStatIncrease>().ApplyEffects(player);//fix
+				player.SetData(player.playerData);//fix
                 break;
             case UpgradeType.Weapon:
                 upgradeGameObject.GetComponent<WeaponBuff>().ApplyEffects(player.GetWeapon());
@@ -53,6 +55,7 @@ public class UpgradeManager : MonoBehaviour
         }
 
         player.GetComponent<PlayerController>().AddUpgrade(upgradeData);
+
     }
 
     public void Run()
@@ -83,4 +86,5 @@ public class UpgradeManager : MonoBehaviour
 
         return upgradeList;
     }
+	
 }

@@ -8,6 +8,10 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+	public PlayerData playerData;
+	public PlayerStats playerStats;
+	private PlayerStats orginialPlayerStats;
+	
     [SerializeField] private float playerSpeed = 10.0f;
     private float originalSpeed;
     private float sprintSpeed = 5f;
@@ -53,6 +57,8 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+		SetData(playerData);
+		StoreOrginialData(playerData);
         controller = gameObject.GetComponent<CharacterController>();
         controller.enabled = true;
         currentStamina = staminaMax;
@@ -277,5 +283,25 @@ public class PlayerController : MonoBehaviour
     {
         return Weapon.GetComponent<WeaponBase>();
     }
+	
+	public void StoreOrginialData(PlayerData pd)
+    {
+        playerData = pd;
+
+        orginialPlayerStats = new PlayerStats(pd.stats.health, pd.stats.stamina, pd.stats.speed);
+    }
+
+    public void SetData(PlayerData pd)
+    {
+        playerData = pd;
+
+        playerStats = new PlayerStats(pd.stats.health, pd.stats.stamina, pd.stats.speed);
+    }
+	
+	
+	private void OnDisable()
+	{
+		playerData.stats = orginialPlayerStats; 
+	}
 
 }
