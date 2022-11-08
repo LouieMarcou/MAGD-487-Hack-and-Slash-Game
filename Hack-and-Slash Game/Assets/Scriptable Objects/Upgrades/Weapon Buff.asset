@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c6f67983a41e44987ccfe0d959fccf, type: 3}
   m_Name: Weapon Buff
   m_EditorClassIdentifier: 
-  Name: 
-  upgradeType: 0
-  UpgradeBasePrefab: {fileID: 0}
-  uniqueNumber: 0
+  Name: Weapon Buff
+  upgradeType: 1
+  UpgradeBasePrefab: {fileID: 4695755485496954853, guid: 458f6a7e956423c4798662151183e98b, type: 3}
+  uniqueNumber: 10
   icon: {fileID: 0}
-  UpgradeText: 
+  UpgradeText: Increases damage and attack speed by 10%

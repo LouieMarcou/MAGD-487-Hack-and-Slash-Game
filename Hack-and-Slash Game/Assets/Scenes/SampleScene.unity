@@ -330,8 +330,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 292.5, y: 0}
+  m_SizeDelta: {x: 185, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &68452263
 MonoBehaviour:
@@ -549,7 +549,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &252756832
 GameObject:
@@ -1156,6 +1156,57 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &435657666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 435657667}
+  - component: {fileID: 435657668}
+  m_Layer: 0
+  m_Name: KnightObjectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &435657667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435657666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &435657668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435657666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f574ee7174523314e879913e2e1b079a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 8756739110352464224, guid: e43541b9098fe934381538c3b14b7230, type: 3}
+  amountToPool: 5
+  player: {fileID: 421289612}
+  spawnArea: {x: 20, y: 0, z: 20}
+  secondsToSpawn: 1
+  enemyHolder: {fileID: 159782393}
 --- !u!1 &458665152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,8 +1406,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 292.72495, y: 0}
+  m_SizeDelta: {x: 185.44989, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496167622
 MonoBehaviour:
@@ -2295,7 +2346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 187}
+  m_AnchoredPosition: {x: 0, y: 237.7}
   m_SizeDelta: {x: 309.2293, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &960137819
@@ -3251,8 +3302,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7831196af879048b5d9a96ddf79b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveData: {fileID: 11400000, guid: a62d8bdc042979e44a3e2bd529c0039d, type: 2}
-  currentWave: {fileID: 11400000, guid: a62d8bdc042979e44a3e2bd529c0039d, type: 2}
+  waves:
+  - {fileID: 11400000, guid: a62d8bdc042979e44a3e2bd529c0039d, type: 2}
+  - {fileID: 11400000, guid: b1c37fc01a277ff4ca5f1803ddcccd24, type: 2}
+  currentWave: {fileID: 0}
   waveText: {fileID: 960137819}
   upgradeManager: {fileID: 1346969738}
 --- !u!114 &1346969738
@@ -3272,6 +3325,7 @@ MonoBehaviour:
   upgradeObjectsContainer: {fileID: 2015613543}
   avalibleUpgrades:
   - {fileID: 11400000, guid: 02bd959ec138b124190ba8101169065c, type: 2}
+  - {fileID: 11400000, guid: e5ee5cb117ac1e5449656f2272591f9c, type: 2}
 --- !u!114 &1346969739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3290,6 +3344,7 @@ MonoBehaviour:
   - {fileID: 1011821978}
   - {fileID: 1065890679}
   player: {fileID: 421289612}
+  enemyManager: {fileID: 1346969737}
 --- !u!850595691 &1413574554
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -3553,8 +3608,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 292.5, y: 0}
+  m_SizeDelta: {x: 185, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662367550
 MonoBehaviour:
@@ -3803,8 +3858,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015613542}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.0374422, y: -1.6173635, z: -3.16717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

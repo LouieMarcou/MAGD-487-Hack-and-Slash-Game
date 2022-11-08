@@ -30,7 +30,7 @@ public class UpgradeManager : MonoBehaviour
     {
         UpgradeData upgradeData = selectedUpgrades[selectedUpgradeId];
 
-
+        AddUpgrade(upgradeData);
 
     }
 
@@ -45,6 +45,7 @@ public class UpgradeManager : MonoBehaviour
                 break;
             case UpgradeType.Weapon:
                 upgradeGameObject.GetComponent<WeaponBuff>().ApplyEffects(player.GetWeapon());
+                player.GetWeapon().SetData(player.GetWeapon().weaponData);
                 break;
             case UpgradeType.Special:
 

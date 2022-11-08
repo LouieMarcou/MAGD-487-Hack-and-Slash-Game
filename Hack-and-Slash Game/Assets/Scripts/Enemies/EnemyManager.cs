@@ -5,9 +5,10 @@ using TMPro;
 
 public class EnemyManager : MonoBehaviour
 {
-    [SerializeField] private WaveData waveData;
+    [SerializeField] private List<WaveData> waves;
     [SerializeField] private WaveData currentWave;
     [SerializeField] private TMP_Text waveText;
+    private int waveCount = 0;
 
     private float timer = 2f;
     private bool stop = false;
@@ -18,7 +19,7 @@ public class EnemyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        currentWave = waves[waveCount];
     }
 
     // Update is called once per frame
@@ -32,25 +33,41 @@ public class EnemyManager : MonoBehaviour
         }
         else if(stop && currentWave.KillCount == currentWave.GetTotalEnemies() && isWaveOver == false)
         {
-            waveText.gameObject.SetActive(true);
+            //waveText.gameObject.SetActive(true);
             isWaveOver = true;
+            waveCount++;
             upgradeManager.Run();
 
         }
     }
 
+    //Will start the next wave by getting the total enemies of the wave
+    //Will find the object pools belonging to each enemy in the wave and allow them to spawn
     private void StartWave()
     {
-        Debug.Log("starting wave one");
-        waveData.CalculateTotalEnemies();
+        Debug.Log("starting wave " + (waveCount + 1) );
+        currentWave.CalculateTotalEnemies();
         GameObject obj;
         obj = GameObject.Find((currentWave.EnemyTypes[0].EnemyBasePrefab.name + "ObjectPool"));
         obj.GetComponent<EnemyObjectPool>().SetCanSpawn(true);
-        obj.GetComponent<EnemyObjectPool>().SetAmountOfEnemiesToSpawn(waveData.GetTotalEnemies());
+        obj.GetComponent<EnemyObjectPool>().SetAmountOfEnemiesToSpawn(currentWave.GetTotalEnemies());
+    }
+
+    public void ResetTimer()
+    {
+        timer = 2f;
+        stop = false;
+        isWaveOver = false;
+        currentWave = waves[waveCount];
     }
 
     public WaveData GetCurrentWave()
     {
         return currentWave;
+    }
+
+    private void OnDisable()
+    {
+        waveCount = 0;
     }
 }

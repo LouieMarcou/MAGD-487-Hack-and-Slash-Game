@@ -64,21 +64,21 @@
     <Compile Include="Assets\Scripts\Upgrades\UpgradeManager.cs" />
     <Compile Include="Assets\Scripts\Enemies\Set.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Special\Thorns.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\WeaponBuff.cs" />
     <Compile Include="Assets\Scripts\EnemyObjectPool.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponData.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Weapons.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\UpgradeButton.cs" />
     <Compile Include="Assets\Scripts\CollisionDetection.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\Enemies\WaveData.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLookVersion2.cs" />
     <Compile Include="Assets\Scripts\Collectable\Item.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\UpgradePanelManager.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Weapons\Sword.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyData.cs" />
-    <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\Weapon Buff.cs" />
-    <Compile Include="Assets\Scripts\Upgrades\UpgradePanelManager.cs" />
-    <Compile Include="Assets\Scripts\Upgrades\UpgradeButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -10,6 +10,8 @@ public class UpgradePanelManager : MonoBehaviour
 
     [SerializeField] private GameObject player;
 
+    [SerializeField] private EnemyManager enemyManager;
+
     void Start()
     {
         HideButtons();
@@ -20,6 +22,7 @@ public class UpgradePanelManager : MonoBehaviour
         Clean();
         panel.SetActive(true);
         Time.timeScale = 0;
+        player.GetComponent<MouseLook>().enabled = false;
 
         for (int i = 0; i < upgradeDatas.Count; i++)
         {
@@ -40,16 +43,19 @@ public class UpgradePanelManager : MonoBehaviour
     public void Upgrade(int pressedButtonID)
     {
         //Debug.Log("Player pressed : " + pressedButtonID.ToString());
-        //player.GetComponent<LevelUp>().Upgrade(pressedButtonID);
+        GetComponent<UpgradeManager>().Upgrade(pressedButtonID);
         ClosePanel();
     }
 
     public void ClosePanel()
     {
+        Debug.Log("closing panel");
         HideButtons();
 
         panel.SetActive(false);
         Time.timeScale = 1;
+        player.GetComponent<MouseLook>().enabled = true;
+        enemyManager.ResetTimer();
     }
 
     private void HideButtons()

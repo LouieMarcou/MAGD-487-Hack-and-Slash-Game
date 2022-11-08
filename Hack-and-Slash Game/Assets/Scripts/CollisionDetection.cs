@@ -10,7 +10,7 @@ public class CollisionDetection : MonoBehaviour
     {
         if(collision.tag == "Enemy" && wp.isAttacking)
         {
-            Debug.Log(collision.name);
+            //Debug.Log(collision.name);
             collision.GetComponent<EnemyBase>().TakeDamage(wp.weaponData.stats.damage);
         }
     }

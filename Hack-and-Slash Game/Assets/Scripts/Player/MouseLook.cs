@@ -14,7 +14,7 @@ public class MouseLook : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
         //Cursor.visible = false;        
     }
     private void Update()
@@ -39,6 +39,11 @@ public class MouseLook : MonoBehaviour
         mouseX = mouseInput.x * sensitivityX;
         mouseY = mouseInput.y * sensitivityY;
         //Debug.Log(mouseY);
+    }
+
+    private void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void OnDisable()

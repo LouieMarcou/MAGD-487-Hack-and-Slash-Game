@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
     {
         jumped = context.ReadValueAsButton();
         jumped = context.action.triggered;
-        Debug.Log("Jumped");
+        //Debug.Log("Jumped");
     }
 
     //Sprint function: Sets isSprinting to true
@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
 
         if(context.performed)
         {
-            Debug.Log("is sprinting");
+            //Debug.Log("is sprinting");
             isSprinting = true;
         }
     }
@@ -239,6 +239,7 @@ public class PlayerController : MonoBehaviour
     {
         health -= damage;
 		healthBar.value = health;
+        Debug.Log(health);
         if(upgrades.Count > 0)
         {
             foreach(UpgradeData ud in upgrades)

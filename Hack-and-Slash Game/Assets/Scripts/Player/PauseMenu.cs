@@ -43,6 +43,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         MouseLook mouse = gameObject.GetComponentInParent(typeof(MouseLook)) as MouseLook;
         mouse.enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     //Activates the pauseMenuUI and sets the time scale to 0 so everything stops
