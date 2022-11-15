@@ -5,13 +5,16 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
     [SerializeField] private PlayerController playerController;
+    [SerializeField] private GameObject chooseWeaponPanel;
     [SerializeField] private Transform weaponObjectsContainer;
     [SerializeField] private WeaponData startingWeapon;
+    [SerializeField] private List<WeaponData> avalibleWeapons;
 
     // Start is called before the first frame update
     void Start()
     {
-        AddWeapon(startingWeapon);
+        //AddWeapon(startingWeapon);
+        Time.timeScale = 0;
     }
 
     //Creates weapon for player, places it in the weapon holder, and stores its data
@@ -23,5 +26,12 @@ public class WeaponManager : MonoBehaviour
         weaponGameObject.GetComponent<WeaponBase>().StoreOrginialData(weaponData);
         weaponGameObject.GetComponent<WeaponBase>().playerController = playerController;
         playerController.SetWeapon(weaponGameObject);
+    }
+
+    public void ChooseWeapon(int weaponId)
+    {
+        AddWeapon(avalibleWeapons[weaponId]);
+        chooseWeaponPanel.SetActive(true);
+        Time.timeScale = 1;
     }
 }

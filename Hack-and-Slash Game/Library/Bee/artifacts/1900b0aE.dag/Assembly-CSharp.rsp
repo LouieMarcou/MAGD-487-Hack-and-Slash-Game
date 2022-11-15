@@ -348,6 +348,7 @@
 "Assets/Scripts/Enemies/Set.cs"
 "Assets/Scripts/Enemies/WaveData.cs"
 "Assets/Scripts/EnemyObjectPool.cs"
+"Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/ObjectPool.cs"
 "Assets/Scripts/Player/MouseLook.cs"
 "Assets/Scripts/Player/MouseLookVersion2.cs"
