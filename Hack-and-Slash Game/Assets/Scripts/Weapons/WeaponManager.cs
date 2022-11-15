@@ -14,6 +14,7 @@ public class WeaponManager : MonoBehaviour
     void Start()
     {
         //AddWeapon(startingWeapon);
+		playerController.gameObject.GetComponent<MouseLook>().enabled = false;
         Time.timeScale = 0;
     }
 
@@ -31,7 +32,8 @@ public class WeaponManager : MonoBehaviour
     public void ChooseWeapon(int weaponId)
     {
         AddWeapon(avalibleWeapons[weaponId]);
-        chooseWeaponPanel.SetActive(true);
+        chooseWeaponPanel.SetActive(false);
+		playerController.GetComponent<MouseLook>().enabled = true;
         Time.timeScale = 1;
     }
 }

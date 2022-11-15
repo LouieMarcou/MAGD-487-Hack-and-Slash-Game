@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform weaponObjectsContainer;
 
     public List<UpgradeData> upgrades;
-
+	
     void Awake()
     {
 		SetData(playerData);
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
     //Attack function
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if(gameObject.GetComponent<PauseMenu>().getGameIsPaused())
+        if(gameObject.GetComponent<PauseMenu>().getGameIsPaused() || Weapon == null)
         {
             return;
         }
@@ -249,7 +249,7 @@ public class PlayerController : MonoBehaviour
     {
         health -= damage;
 		healthBar.value = health;
-        Debug.Log(health);
+        //Debug.Log(health);
         if(upgrades.Count > 0)
         {
             foreach(UpgradeData ud in upgrades)
@@ -265,6 +265,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+	public void AddHealth(float heal)
+	{
+		health+=heal;
+		if(health>healthMax)
+			health = healthMax;
+		healthBar.value = health;
+		Debug.Log(health);
+	}
 
     //Sets Weapon
     public void SetWeapon(GameObject weapon)

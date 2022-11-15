@@ -6,6 +6,9 @@ public class Sword : WeaponBase
 {
 	private bool canAttack;	
 	
+	private bool hasLifesteal = false;
+	private float lifestealAmountPerecent;
+	
     // Start is called before the first frame update
     void Start()
     {
@@ -51,5 +54,25 @@ public class Sword : WeaponBase
         yield return timer;
         isAttacking = false;
     }
+	
+	public void SetHasLifesteal()
+	{
+		hasLifesteal = true;
+	}
+	
+	public bool GetHasLifesteal()
+	{
+		return hasLifesteal;
+	}
+	
+	public void SetLifestealAmount(float num)
+	{
+		lifestealAmountPerecent = num;
+	}
+	
+	public float GetLifestealAmount()
+	{
+		return lifestealAmountPerecent;
+	}
 
 }

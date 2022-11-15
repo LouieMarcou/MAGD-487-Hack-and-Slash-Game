@@ -44,8 +44,8 @@ public class UpgradeManager : MonoBehaviour
         switch (upgradeData.upgradeType)
         {
             case UpgradeType.Player:
-                upgradeGameObject.GetComponent<PlayerFlatStatIncrease>().ApplyEffects(player);//fix
-				player.SetData(player.playerData);//fix
+                upgradeGameObject.GetComponent<PlayerFlatStatIncrease>().ApplyEffects(player);
+				player.SetData(player.playerData);
                 break;
             case UpgradeType.Weapon:
                 upgradeGameObject.GetComponent<WeaponUpgrade>().ApplyEffects(player.GetWeapon());
