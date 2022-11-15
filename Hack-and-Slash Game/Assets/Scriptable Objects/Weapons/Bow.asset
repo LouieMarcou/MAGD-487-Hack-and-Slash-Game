@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Bow
   stats:
-    damage: 10
+    damage: 5
     timeToAttack: 1
     speed: 2
   weaponBasePrefab: {fileID: 212800665584672973, guid: b6244f2af4c2b49b88cc330546e8c15d, type: 3}

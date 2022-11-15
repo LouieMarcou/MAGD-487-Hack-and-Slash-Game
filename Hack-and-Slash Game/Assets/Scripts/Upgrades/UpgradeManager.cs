@@ -13,6 +13,8 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField] List<UpgradeData> avalibleUpgrades;
     List<UpgradeData> selectedUpgrades;
 
+    private GameObject upgradeGameObject;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,16 +39,16 @@ public class UpgradeManager : MonoBehaviour
 
     public void AddUpgrade(UpgradeData upgradeData)
     {
-        GameObject upgradeGameObject = Instantiate(upgradeData.UpgradeBasePrefab, upgradeObjectsContainer);
+        upgradeGameObject = Instantiate(upgradeData.UpgradeBasePrefab, upgradeObjectsContainer);
 
-        switch(upgradeData.upgradeType)
+        switch (upgradeData.upgradeType)
         {
             case UpgradeType.Player:
-				upgradeGameObject.GetComponent<PlayerFlatStatIncrease>().ApplyEffects(player);//fix
+                upgradeGameObject.GetComponent<PlayerFlatStatIncrease>().ApplyEffects(player);//fix
 				player.SetData(player.playerData);//fix
                 break;
             case UpgradeType.Weapon:
-                upgradeGameObject.GetComponent<WeaponBuff>().ApplyEffects(player.GetWeapon());
+                upgradeGameObject.GetComponent<WeaponUpgrade>().ApplyEffects(player.GetWeapon());
                 player.GetWeapon().SetData(player.GetWeapon().weaponData);
                 break;
             case UpgradeType.Special:
@@ -79,8 +81,8 @@ public class UpgradeManager : MonoBehaviour
         }
         for (int i = 0; i < count; i++)
         {
-            //upgradeList.Add(upgrades[Random.Range(0, upgrades.Count)]);
-            upgradeList.Add(avalibleUpgrades[i]);
+            //upgradeList.Add(avalibleUpgrades[Random.Range(0, avalibleUpgrades.Count)]);
+            upgradeList.Add(avalibleUpgrades[i]);//add rarity???
         }
 
 

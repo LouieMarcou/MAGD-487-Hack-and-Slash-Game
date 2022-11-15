@@ -71,10 +71,15 @@
     <Compile Include="Assets\Scripts\Weapons\WeaponData.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Weapons.cs" />
     <Compile Include="Assets\Scripts\Upgrades\UpgradeButton.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\FlatAttackIncrease.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Arrow.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\BowDoubleShot.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\WeaponUpgrade.cs" />
     <Compile Include="Assets\Scripts\CollisionDetection.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\Enemies\WaveData.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLookVersion2.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Bow.cs" />
     <Compile Include="Assets\Scripts\Collectable\Item.cs" />
     <Compile Include="Assets\Scripts\Upgrades\UpgradePanelManager.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLook.cs" />

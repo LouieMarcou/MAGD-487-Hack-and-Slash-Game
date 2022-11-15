@@ -4,41 +4,72 @@ using UnityEngine;
 
 public class Bow : WeaponBase
 {
-	[SerializeField] private GameObject arrow;
-	private GameObject arrowClone;
-	private Vector3 arrowSpeed;
-	private bool canAttack;	
-	
-    // Start is called before the first frame update
-    void Start()
-    {
-        arrowClone = Instantiate(arrow, transform);
-		canAttack = true;
-		arrowSpeed = new Vector3(0,0,10);
+	[SerializeField] private GameObject arrowPrefab;
+	[SerializeField] private List<GameObject> arrows;
+	private ObjectPool arrowObjectPool;
 
+	private GameObject arrowClone;
+	private GameObject currentArrow;
+	private float numShots = 1;
+	private bool canAttack;
+
+	private float secondShotDelayFloat = 0.2f;
+	private WaitForSeconds secondShotDelayTime;
+
+	// Start is called before the first frame update
+	void Start()
+    {
+  //      arrowClone = Instantiate(arrowPrefab, transform.position, transform.rotation, transform);
+		//arrowClone.GetComponent<Arrow>().SetParent(transform);
+		canAttack = true;
+		arrowObjectPool = GameObject.Find("ArrowObjectPool").GetComponent<ObjectPool>();
+		
+
+		for(int i = 0; i < numShots; i++)
+        {
+			arrows.Add(arrowObjectPool.pooledObjects[i]);
+			arrows[i].transform.position = transform.position;
+			arrows[i].transform.rotation = transform.rotation;
+			arrows[i].transform.parent = transform;
+			arrows[i].GetComponent<Arrow>().SetBow(GetComponent<Bow>());
+			arrows[i].GetComponent<Arrow>().SetParent(transform);
+			//Debug.Log(i);
+		}
+
+		currentArrow = arrows[0];
+		currentArrow.SetActive(true);
+		
+
+		secondShotDelayTime = new WaitForSeconds(secondShotDelayFloat);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 	
 	public override void Attack()
 	{
 		if(canAttack)
 		{
-			Debug.Log("attack");
-			arrowClone.transform.parent = null;
-			Debug.Log(arrowClone.transform.parent);
-			//isAttacking = true;
+			currentArrow.transform.parent = null;
+			isAttacking = true;
             canAttack = false;
+			Debug.Log(arrows.Count);
+
+			if (arrows.Count == 1)
+			{
+				arrows[0].GetComponent<Arrow>().Shoot();
+				StartCoroutine(AttackCooldown());
+			}
+			else if (arrows.Count == 2)
+            {
+				arrows[0].GetComponent<Arrow>().Shoot();
+				StartCoroutine(TimeBetweenShots());
+			}
+
 			
-			arrowClone.GetComponent<Rigidbody>().AddForce(arrowSpeed * 200f, ForceMode.Force);
-			arrowClone.GetComponent<Rigidbody>().useGravity = true;
-			//arrowClone.GetComponent<Rigidbody>().velocity = new Vector3(0,0,1);
-			
-            StartCoroutine(AttackCooldown());
 		}
 	}
 	
@@ -46,15 +77,39 @@ public class Bow : WeaponBase
 	{
 		
 		yield return timer;
-		ResetArrow();
+		//currentArrow.GetComponent<Arrow>().Reset();
+		for (int i = 0; i < arrows.Count; i++)
+		{
+			arrows[i].GetComponent<Arrow>().Reset();
+		}
 		canAttack = true;
+		isAttacking = false;
 	}
 	
-	public void ResetArrow()
+	public void AddNumberOfShots(float num)
 	{
-		arrowClone.transform.parent = transform;
-		arrowClone.transform.position = transform.position;
-		arrowClone.GetComponent<Rigidbody>().useGravity = false;
-		arrowClone.GetComponent<Rigidbody>().AddForce(Vector3.zero, ForceMode.VelocityChange);
+		int val = (int)numShots;
+		numShots += num;
+		arrows.Add(arrowObjectPool.pooledObjects[val]);
+        arrows[val].transform.position = transform.position;
+        arrows[val].transform.rotation = transform.rotation;
+        arrows[val].transform.parent = transform;
+        arrows[val].GetComponent<Arrow>().SetBow(GetComponent<Bow>());
+        arrows[val].GetComponent<Arrow>().SetParent(transform);
+		//Debug.Log(arrows[val].transform.parent);
+    }
+
+	private IEnumerator TimeBetweenShots()
+    {
+		Debug.Log("waiting for next shot");
+		yield return secondShotDelayTime;
+		Debug.Log("next shot");
+		arrows[1].GetComponent<Arrow>().Shoot();
+		StartCoroutine(AttackCooldown());
 	}
+
+	void OnDisable()
+    {
+		numShots = 1;
+    }
 }

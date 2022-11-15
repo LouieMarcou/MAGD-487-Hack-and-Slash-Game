@@ -90,6 +90,10 @@ public class PlayerController : MonoBehaviour
     //Attack function
     public void OnAttack(InputAction.CallbackContext context)
     {
+        if(gameObject.GetComponent<PauseMenu>().getGameIsPaused())
+        {
+            return;
+        }
         isAttacking = context.ReadValueAsButton();
         isAttacking = context.action.triggered;
         if(isAttacking)

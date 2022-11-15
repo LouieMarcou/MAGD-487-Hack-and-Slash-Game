@@ -52,7 +52,9 @@ MonoBehaviour:
     speed: 0
   playerController: {fileID: 0}
   isAttacking: 0
-  arrow: {fileID: 8350191423664846446, guid: e2ab1c03bd7d8495584bba4a38a70076, type: 3}
+  arrowPrefab: {fileID: 8350191423664846446, guid: e2ab1c03bd7d8495584bba4a38a70076, type: 3}
+  arrows: []
+  numShots: 2
 --- !u!1001 &1743400560078273780
 PrefabInstance:
   m_ObjectHideFlags: 0
