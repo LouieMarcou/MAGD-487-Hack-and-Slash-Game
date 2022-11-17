@@ -6,6 +6,8 @@ public class Axe : WeaponBase
 {
     private bool canAttack;
 	
+	private bool canCharge = false;
+	
 	void Start()
     {
         playerController.GetAnimator().speed = weaponData.stats.speed;
@@ -17,12 +19,20 @@ public class Axe : WeaponBase
 
     }
 	
+	public void ChargeAttack()
+	{
+		Debug.Log("charging");
+		playerController.GetAnimator().SetTrigger("Charge Attack");
+	}
+	
 	public override void Attack()
     {
         if (canAttack)
         {
             isAttacking = true;
             canAttack = false;
+			if(canCharge)
+				playerController.GetAnimator().SetTrigger("Charge Attack");
             playerController.GetAnimator().SetTrigger("Axe Attack");
             StartCoroutine(AttackCooldown());
         }
@@ -42,4 +52,14 @@ public class Axe : WeaponBase
         yield return timer;
         isAttacking = false;
     }
+	
+	public bool GetCanCharge()
+	{
+		return canCharge;
+	}
+	
+	public void SetCanCharge()
+	{
+		canCharge = true;
+	}
 }

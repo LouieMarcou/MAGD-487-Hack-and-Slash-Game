@@ -94,14 +94,46 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
+		Debug.Log(context.interaction);
+		var actuationTime = context.time - context.startTime;
+		
+//		if(actuationTime >= 1)
+//		{
+//			context.action.Performed();
+//		}
+//		else
+//		{
+//			context.action.Cancelled();
+//		}
         isAttacking = context.ReadValueAsButton();
         isAttacking = context.action.triggered;
         if(isAttacking)
         {
-            Weapon.GetComponent<WeaponBase>().Attack();
-            
-            
+//			if(actuationTime <= 0.2)
+//				Debug.Log("Tap");
+//			else if (actuationTime >= 0.5)
+//				Debug.Log("Hold");
+//			//Debug.Log(actuationTime);
+//            Weapon.GetComponent<WeaponBase>().Attack();
+            if(Weapon.GetComponent<Axe>())
+			{
+				Debug.Log(actuationTime);
+				Weapon.GetComponent<Axe>().ChargeAttack();
+			}
+			if(Weapon.GetComponent<Axe>() && Weapon.GetComponent<Axe>().GetCanCharge())
+			{
+				Debug.Log(actuationTime);
+			}
+			
+//			bool test = context.action.started;
+//			
+//            if(test)
+//			{
+//				Debug.Log("let go");
+//			}
         }
+		
+		
     }
 
     //Jump function
