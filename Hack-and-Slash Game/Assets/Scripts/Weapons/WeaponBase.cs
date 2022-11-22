@@ -29,7 +29,7 @@ public abstract class WeaponBase : MonoBehaviour
         playerController.GetAnimator().speed = weaponData.stats.speed;
         timer = new WaitForSeconds(weaponData.stats.timeToAttack / weaponData.stats.speed);
         //timer = new WaitForSeconds(weaponData.stats.timeToAttack);
-        Debug.Log(weaponData.stats.timeToAttack + " / " + weaponData.stats.speed + " = " + weaponData.stats.timeToAttack / weaponData.stats.speed);
+        //Debug.Log(weaponData.stats.timeToAttack + " / " + weaponData.stats.speed + " = " + weaponData.stats.timeToAttack / weaponData.stats.speed);
         playerController.GetAnimator().SetFloat("Speed", weaponData.stats.speed);
         canAttack = true;
     }

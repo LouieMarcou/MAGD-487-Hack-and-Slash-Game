@@ -24,14 +24,15 @@ public class CollisionDetection : MonoBehaviour
                 }
             }
 
-
+			float modifiedDamage = damage * Random.Range(0.7f, 1.2f);
+			//Debug.Log(modifiedDamage);
             if (wp.weaponData.Name.Contains("Axe") && wp.gameObject.GetComponent<Axe>().GetChargeRelease())
             {
-                collision.GetComponent<EnemyBase>().TakeDamage(damage * wp.gameObject.GetComponent<Axe>().GetAttackModifier());
+                collision.GetComponent<EnemyBase>().TakeDamage(modifiedDamage * wp.gameObject.GetComponent<Axe>().GetAttackModifier());
             }
             else
             {
-                collision.GetComponent<EnemyBase>().TakeDamage(damage);
+                collision.GetComponent<EnemyBase>().TakeDamage(modifiedDamage);
                 if(GetComponent<Arrow>())
                 {
                     gameObject.SetActive(false);

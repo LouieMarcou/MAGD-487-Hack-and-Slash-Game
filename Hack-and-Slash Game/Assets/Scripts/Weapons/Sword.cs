@@ -19,12 +19,6 @@ public class Sword : WeaponBase
     //    canAttack = true;
 
     //}
-	
-	void Update()
-	{
-
-	}
-
 
     public override void Attack()
     {
