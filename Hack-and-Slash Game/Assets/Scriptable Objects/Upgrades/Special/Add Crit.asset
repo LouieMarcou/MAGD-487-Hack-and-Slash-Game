@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c6f67983a41e44987ccfe0d959fccf, type: 3}
   m_Name: Add Crit
   m_EditorClassIdentifier: 
-  Name: 
-  upgradeType: 0
-  UpgradeBasePrefab: {fileID: 0}
-  uniqueNumber: 0
+  Name: Critcal Strike
+  upgradeType: 2
+  UpgradeBasePrefab: {fileID: 6444557159363953761, guid: 89f9585159c45354cb8c31e9b4451efe, type: 3}
+  uniqueNumber: 5
+  unique: 1
   icon: {fileID: 0}
-  UpgradeText: 
+  UpgradeText: Adds the ability to critcal strike

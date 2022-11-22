@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Knight
   stats:
-    health: 20
+    health: 30
     damage: 15
     speed: 3
     timeToAttack: 1
