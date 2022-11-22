@@ -5,6 +5,8 @@ using TMPro;
 
 public class EnemyManager : MonoBehaviour
 {
+    [SerializeField] private List<Set> sets;
+    [SerializeField] private Set currentSet;
     [SerializeField] private List<WaveData> waves;
     [SerializeField] private WaveData currentWave;
     [SerializeField] private TMP_Text waveText;
@@ -19,7 +21,9 @@ public class EnemyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentWave = waves[waveCount];
+        currentSet = sets[0];
+        currentWave = sets[0].Waves[waveCount];
+        Debug.Log(currentWave);
     }
 
     // Update is called once per frame
@@ -39,13 +43,17 @@ public class EnemyManager : MonoBehaviour
             upgradeManager.Run();
 
         }
+        if(waveCount > currentSet.Waves.Count)
+        {
+            Debug.Log("Set is over");
+        }
     }
 
     //Will start the next wave by getting the total enemies of the wave
     //Will find the object pools belonging to each enemy in the wave and allow them to spawn
     private void StartWave()
     {
-        Debug.Log("starting wave " + (waveCount + 1) );
+        //Debug.Log("starting wave " + (waveCount + 1) );
         currentWave.CalculateTotalEnemies();
         
 		for(int i = 0; i < currentWave.EnemyAmountForEachType.Count; i++)

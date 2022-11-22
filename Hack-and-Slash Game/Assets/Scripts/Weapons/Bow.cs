@@ -11,7 +11,6 @@ public class Bow : WeaponBase
 	private GameObject arrowClone;
 	private GameObject currentArrow;
 	private float numShots = 1;
-	private bool canAttack;
 
 	private float secondShotDelayFloat = 0.2f;
 	private WaitForSeconds secondShotDelayTime;
@@ -23,9 +22,10 @@ public class Bow : WeaponBase
 		//arrowClone.GetComponent<Arrow>().SetParent(transform);
 		canAttack = true;
 		arrowObjectPool = GameObject.Find("ArrowObjectPool").GetComponent<ObjectPool>();
-		
 
-		for(int i = 0; i < numShots; i++)
+
+
+		for (int i = 0; i < numShots; i++)
         {
 			arrows.Add(arrowObjectPool.pooledObjects[i]);
 			arrows[i].transform.position = transform.position;
@@ -42,12 +42,6 @@ public class Bow : WeaponBase
 
 		secondShotDelayTime = new WaitForSeconds(secondShotDelayFloat);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 	
 	public override void Attack()
 	{
@@ -56,7 +50,7 @@ public class Bow : WeaponBase
 			currentArrow.transform.parent = null;
 			isAttacking = true;
             canAttack = false;
-			Debug.Log(arrows.Count);
+			//Debug.Log(arrows.Count);
 
 			if (arrows.Count == 1)
 			{
@@ -111,5 +105,9 @@ public class Bow : WeaponBase
 	void OnDisable()
     {
 		numShots = 1;
-    }
+		if (GetOrginialStats() != null)
+		{
+			weaponData.stats = GetOrginialStats();
+		}
+	}
 }

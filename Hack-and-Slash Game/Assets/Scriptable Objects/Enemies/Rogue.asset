@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Rogue
   stats:
-    health: 5
+    health: 15
     damage: 5
     speed: 5
     timeToAttack: 0.5

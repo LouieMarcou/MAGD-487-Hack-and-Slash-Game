@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaveName: Wave 4
   EnemyTypes:
-  - {fileID: 11400000, guid: 1bdee8dab35054aeab496d8bfc2ddd1c, type: 2}
-  - {fileID: 11400000, guid: c33fabc7e72404d2faf2c5438cc55b0b, type: 2}
-  EnemyAmountForEachType: 0900000005000000
+  - {fileID: 11400000, guid: 9a1a8d4eb45b64a1baaebf5d6205249d, type: 2}
+  EnemyAmountForEachType: 01000000
   KillCount: 0

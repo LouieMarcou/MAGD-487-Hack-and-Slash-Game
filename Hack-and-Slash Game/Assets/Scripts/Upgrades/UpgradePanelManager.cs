@@ -8,6 +8,8 @@ public class UpgradePanelManager : MonoBehaviour
 
     [SerializeField] List<UpgradeButton> upgradeButtons;
 
+    [SerializeField] UpgradeManager upgradeManager;
+
     [SerializeField] private GameObject player;
 
     [SerializeField] private EnemyManager enemyManager;
@@ -43,16 +45,18 @@ public class UpgradePanelManager : MonoBehaviour
     public void Upgrade(int pressedButtonID)
     {
         //Debug.Log("Player pressed : " + pressedButtonID.ToString());
-        GetComponent<UpgradeManager>().Upgrade(pressedButtonID);
+        upgradeManager.Upgrade(pressedButtonID);
+        upgradeManager.AddToAvalibleUpgrades(pressedButtonID);
         ClosePanel();
     }
 
     public void ClosePanel()
     {
-        Debug.Log("closing panel");
+        //Debug.Log("closing panel");
         HideButtons();
 
         panel.SetActive(false);
+
         Time.timeScale = 1;
         player.GetComponent<MouseLook>().enabled = true;
         enemyManager.ResetTimer();
