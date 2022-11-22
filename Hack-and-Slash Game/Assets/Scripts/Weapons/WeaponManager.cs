@@ -27,6 +27,7 @@ public class WeaponManager : MonoBehaviour
         weaponGameObject.GetComponent<WeaponBase>().StoreOrginialData(weaponData);
         weaponGameObject.GetComponent<WeaponBase>().playerController = playerController;
         playerController.SetWeapon(weaponGameObject);
+        GetComponent<UpgradeManager>().GetUpgradeDatas().Add(playerController.GetWeapon().weaponData.upgrades[Random.Range(0, playerController.GetWeapon().weaponData.upgrades.Count)]);
     }
 
     public void ChooseWeapon(int weaponId)

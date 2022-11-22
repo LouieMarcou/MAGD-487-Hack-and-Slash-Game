@@ -16,5 +16,10 @@ MonoBehaviour:
   stats:
     damage: 10
     timeToAttack: 1
-    speed: 2
+    speed: 1.3
   weaponBasePrefab: {fileID: 6809856265213747435, guid: a801782fdc48c7b42b38bc7dd3d45394, type: 3}
+  upgrades:
+  - {fileID: 11400000, guid: b7106005211d54242a4b0a54532975ae, type: 2}
+  - {fileID: 11400000, guid: 68ae6d5fad7b1004e96e42549f3ad5bb, type: 2}
+  - {fileID: 11400000, guid: e5ee5cb117ac1e5449656f2272591f9c, type: 2}
+  - {fileID: 11400000, guid: 2bc1ce6be0a684e71a78fcaf5ccb321b, type: 2}

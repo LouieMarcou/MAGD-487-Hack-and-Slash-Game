@@ -18,6 +18,7 @@ public class UpgradeData : ScriptableObject
     public UpgradeType upgradeType;
     public GameObject UpgradeBasePrefab;
     public float uniqueNumber;
+    public bool unique;
     public Sprite icon;
     public string UpgradeText;
 }

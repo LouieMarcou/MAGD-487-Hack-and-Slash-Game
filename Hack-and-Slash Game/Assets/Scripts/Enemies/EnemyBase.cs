@@ -84,7 +84,7 @@ public class EnemyBase : MonoBehaviour
         {
             if (canAttack)
             {
-                player.GetComponent<PlayerController>().TakeDamage(enemyData.stats.damage, gameObject);
+                player.GetComponent<PlayerController>().TakeDamage(enemyData.stats.damage, GetComponent<EnemyBase>());
                 canAttack = false;
                 StartCoroutine(AttackDelay());
             }

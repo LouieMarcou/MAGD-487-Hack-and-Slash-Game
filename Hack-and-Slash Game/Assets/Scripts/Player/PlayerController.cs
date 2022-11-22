@@ -2,19 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 using UnityEngine.UI;
 using UnityEditor;
 using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-	public PlayerData playerData;
-	public PlayerStats playerStats;
-	private PlayerStats orginialPlayerStats;
+    [Header("Data and Stats")]
+    public PlayerData playerData;
+    public PlayerStats playerStats;
+    private PlayerStats orginialPlayerStats;
 	
+    [Header("Speed")]
     [SerializeField] private float playerSpeed = 10.0f;
     private float originalSpeed;
-    private float sprintSpeed = 5f;
+    [SerializeField] private float sprintSpeed = 5f;
     private bool isSprinting;
 
     private float jumpHeight = 1.0f;
@@ -30,20 +33,24 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController controller;
 
+    [Header("Health")]
     [SerializeField] private float health = 100f;
     private float healthMax;
 	private Coroutine healthRegen;
+    private float healthRegenAmount = 2f;
 	private WaitForSeconds healthRegenTick = new WaitForSeconds(5f);//varaible needs testing
 	public Slider healthBar;
 
+    //[Header("Stamina")]
     private Coroutine staminaRegen;
-    private WaitForSeconds staminaRegenTick = new WaitForSeconds(0.05f);
+    private WaitForSeconds staminaRegenTick = new WaitForSeconds(0.1f);//needs testing
     private WaitForSeconds staminaRegenWait = new WaitForSeconds(2f);
-    private float staminaMax = 100f;
-    private float currentStamina;
+    public float staminaMax = 100f;
+    public float currentStamina;
     private float staminaDrain = 15f;
     public Slider staminaBar;
 
+    [Header("Weapon")]
     [SerializeField] private GameObject Weapon;
     private bool isAttacking;
 
@@ -54,6 +61,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform weaponObjectsContainer;
 
     public List<UpgradeData> upgrades;
+
+    private bool hasCrit = false;
+    private float critMultiplier = 0f;
+    private float critChance = 0f;
+
+    private bool hasThorns = false;
+    private float reflectPercentage = 0f;
 	
     void Awake()
     {
@@ -94,46 +108,39 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-		Debug.Log(context.interaction);
 		var actuationTime = context.time - context.startTime;
-		
-//		if(actuationTime >= 1)
-//		{
-//			context.action.Performed();
-//		}
-//		else
-//		{
-//			context.action.Cancelled();
-//		}
+
         isAttacking = context.ReadValueAsButton();
-        isAttacking = context.action.triggered;
-        if(isAttacking)
+
+        if (context.performed)
         {
-//			if(actuationTime <= 0.2)
-//				Debug.Log("Tap");
-//			else if (actuationTime >= 0.5)
-//				Debug.Log("Hold");
-//			//Debug.Log(actuationTime);
-//            Weapon.GetComponent<WeaponBase>().Attack();
-            if(Weapon.GetComponent<Axe>())
-			{
-				Debug.Log(actuationTime);
-				Weapon.GetComponent<Axe>().ChargeAttack();
-			}
-			if(Weapon.GetComponent<Axe>() && Weapon.GetComponent<Axe>().GetCanCharge())
-			{
-				Debug.Log(actuationTime);
-			}
-			
-//			bool test = context.action.started;
-//			
-//            if(test)
-//			{
-//				Debug.Log("let go");
-//			}
+            //Debug.Log("started");
+            // Debug.Log(actuationTime);
+            //Debug.Log(context.interaction);
+            if (Weapon.GetComponent<Axe>() && Weapon.GetComponent<Axe>().GetCanCharge() && actuationTime > 0.2)
+            {
+                //Debug.Log(actuationTime);
+
+                //Debug.Log(context.interaction is HoldInteraction);
+                Weapon.GetComponent<Axe>().ChargeAttack();
+            }
+            else
+            {
+                //Debug.Log("regular attack");
+               // Debug.Log(context.interaction is TapInteraction);
+                Weapon.GetComponent<WeaponBase>().Attack();
+            }
         }
-		
-		
+        else if (context.canceled && context.interaction is HoldInteraction && Weapon.GetComponent<Axe>())
+        {
+            //Debug.Log(actuationTime);
+            //Debug.Log("released");
+            if (Weapon.GetComponent<Axe>() && Weapon.GetComponent<Axe>().GetCanCharge())
+            {
+                //Debug.Log(actuationTime);
+                Weapon.GetComponent<Axe>().ReleaseCharge();
+            }
+        }
     }
 
     //Jump function
@@ -155,6 +162,7 @@ public class PlayerController : MonoBehaviour
             //Debug.Log("is sprinting");
             isSprinting = true;
         }
+
     }
 
     public void OnPause(InputAction.CallbackContext context)
@@ -181,6 +189,7 @@ public class PlayerController : MonoBehaviour
         } 
         Vector3 move = (transform.right * movementInput.x + transform.forward * movementInput.y);
         controller.Move(move * Time.deltaTime * (playerSpeed + sprintSpeed));
+        //Debug.Log(controller.velocity);
 
         if (jumped && groundedPlayer)
         {
@@ -231,7 +240,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                Debug.Log("Not enough stamina");
+                //Debug.Log("Not enough stamina");
                 CancelSprint();
             }
         }
@@ -269,7 +278,7 @@ public class PlayerController : MonoBehaviour
 	{
 		while(health < healthMax)
 		{
-			health += 2f;//variable needs testing
+			health += healthRegenAmount;//variable needs testing
 			healthBar.value = health;
 			yield return healthRegenTick;
 		}
@@ -277,23 +286,14 @@ public class PlayerController : MonoBehaviour
 	}
 
     //Subtracts damage from player health
-    public void TakeDamage(float damage, GameObject enemy)
+    public void TakeDamage(float damage, EnemyBase enemy)
     {
         health -= damage;
 		healthBar.value = health;
         //Debug.Log(health);
-        if(upgrades.Count > 0)
+        if(hasThorns)
         {
-            foreach(UpgradeData ud in upgrades)
-            {
-                if(ud.Name == "Thorns")
-                {
-                    //Debug.Log(enemy.GetComponent<EnemyBase>().currentHealth);
-                    ud.UpgradeBasePrefab.GetComponent<Thorns>().ReflectDamage(enemy.GetComponent<EnemyBase>());
-                    //Debug.Log("Damage reflected");
-                    //Debug.Log(enemy.GetComponent<EnemyBase>().currentHealth);
-                }
-            }
+            enemy.TakeDamage(enemy.enemyData.stats.damage * (reflectPercentage * 0.01f));
         }
     }
 
@@ -306,29 +306,49 @@ public class PlayerController : MonoBehaviour
 		Debug.Log(health);
 	}
 
-    //Sets Weapon
-    public void SetWeapon(GameObject weapon)
-    {
-        Weapon = weapon;
-    }
-
-    //Gets animator
-    public Animator GetAnimator()
-    {
-        return animator;
-    }
-
     public void AddUpgrade(UpgradeData ud)
     {
         upgrades.Add(ud);
     }
 
-    public WeaponBase GetWeapon()
-    {
-        return Weapon.GetComponent<WeaponBase>();
-    }
+
 	
-	public void StoreOrginialData(PlayerData pd)
+	private void OnDisable()
+	{
+		playerData.stats = orginialPlayerStats;
+        for(int i = 0; i < upgrades.Count; i++)
+        {
+            if(upgrades[i].unique)
+            {
+                if(upgrades[i].upgradeType == UpgradeType.Special)
+                    playerData.specialUpgrades.Add(upgrades[i]);
+                if (upgrades[i].upgradeType == UpgradeType.Weapon)
+                    GetWeapon().weaponData.upgrades.Add(upgrades[i]);
+            }
+        }
+	}
+
+    //Setter / Modifier functions
+
+    public void ActivateCrit(float multi, float chance)
+    {
+        hasCrit = true;
+        critMultiplier = multi;
+        critChance = chance;
+    }
+
+    public void ActivateThorns(float reflect)
+    {
+        hasThorns = true;
+        reflectPercentage = reflect;
+    }
+
+    public void SetWeapon(GameObject weapon)
+    {
+        Weapon = weapon;
+    }
+
+    public void StoreOrginialData(PlayerData pd)
     {
         playerData = pd;
 
@@ -341,11 +361,36 @@ public class PlayerController : MonoBehaviour
 
         playerStats = new PlayerStats(pd.stats.health, pd.stats.stamina, pd.stats.speed);
     }
-	
-	
-	private void OnDisable()
-	{
-		playerData.stats = orginialPlayerStats; 
-	}
 
+    public void IncreaseHealthRegen(float amount)
+    {
+        healthRegenAmount += amount;
+    }
+
+    //Getter functions
+
+    public WeaponBase GetWeapon()
+    {
+        return Weapon.GetComponent<WeaponBase>();
+    }
+
+    public Animator GetAnimator()
+    {
+        return animator;
+    }
+
+    public bool GetHasCrit()
+    {
+        return hasCrit;
+    }
+
+    public float GetCritMultiplier()
+    {
+        return critMultiplier;
+    }
+
+    public float GetCritChance()
+    {
+        return critChance;
+    }
 }

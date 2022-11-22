@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c6f67983a41e44987ccfe0d959fccf, type: 3}
+  m_Name: Speed Increase
+  m_EditorClassIdentifier: 
+  Name: Speed Increase
+  upgradeType: 0
+  UpgradeBasePrefab: {fileID: 2937500775564092891, guid: d08e534da763d7843850e8afa58fb499, type: 3}
+  uniqueNumber: 2
+  unique: 0
+  icon: {fileID: 0}
+  UpgradeText: Gives you a small speed increase

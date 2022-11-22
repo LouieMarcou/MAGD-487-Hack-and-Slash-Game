@@ -25,4 +25,6 @@ public class PlayerData : ScriptableObject
 	public string Name;
 	public PlayerStats stats;
 	public GameObject playerBasePrefab;
+	public List<UpgradeData> regularUpgrades;
+	public List<UpgradeData> specialUpgrades;
 }

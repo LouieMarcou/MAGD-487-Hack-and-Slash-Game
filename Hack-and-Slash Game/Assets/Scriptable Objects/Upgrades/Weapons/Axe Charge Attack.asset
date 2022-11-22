@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Charge Attack
   upgradeType: 1
-  UpgradeBasePrefab: {fileID: 0}
-  uniqueNumber: 0
+  UpgradeBasePrefab: {fileID: 6836623239755246815, guid: 5b0db941a5e7db846bc23765f379f701, type: 3}
+  uniqueNumber: 1.5
+  unique: 1
   icon: {fileID: 0}
   UpgradeText: Can now charge attacks for more damage
