@@ -16,6 +16,4 @@ MonoBehaviour:
   upgradeType: 2
   UpgradeBasePrefab: {fileID: 3445826659783761594, guid: f605cf5c7f176584da04706d91b84055, type: 3}
   uniqueNumber: 10
-  unique: 1
-  icon: {fileID: 0}
   UpgradeText: Reflect 10% damage delt to you back at enemies

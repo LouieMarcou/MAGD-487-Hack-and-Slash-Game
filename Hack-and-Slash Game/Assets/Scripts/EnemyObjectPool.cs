@@ -107,6 +107,6 @@ public class EnemyObjectPool : ObjectPool
     public void SetAmountOfEnemiesToSpawn(int amount)
     {
         amountOfEnemiesToSpawn = amount;
-		//Debug.Log("max enemies are " + amountOfEnemiesToSpawn);
+		Debug.Log("max enemies are " + amountOfEnemiesToSpawn);
     }
 }

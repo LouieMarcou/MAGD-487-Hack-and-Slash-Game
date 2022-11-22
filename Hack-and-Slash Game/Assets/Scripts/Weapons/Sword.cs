@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class Sword : WeaponBase
 {
+	private bool canAttack;	
 	
 	private bool hasLifesteal = false;
 	private float lifestealAmountPerecent;
 	
     // Start is called before the first frame update
-    //void Start()
-    //{
-    //    playerController.GetAnimator().speed = weaponData.stats.speed;
-    //    timer = new WaitForSeconds(weaponData.stats.timeToAttack / weaponData.stats.speed);
-    //    //timer = new WaitForSeconds(weaponData.stats.timeToAttack);
-    //    Debug.Log(weaponData.stats.timeToAttack + " / " + weaponData.stats.speed + " = " + weaponData.stats.timeToAttack / weaponData.stats.speed);
-    //    playerController.GetAnimator().SetFloat("Speed", weaponData.stats.speed);
-    //    canAttack = true;
+    void Start()
+    {
+        playerController.GetAnimator().speed = weaponData.stats.speed;
+        timer = new WaitForSeconds(weaponData.stats.timeToAttack / weaponData.stats.speed);
+        //timer = new WaitForSeconds(weaponData.stats.timeToAttack);
+        //Debug.Log(weaponData.stats.timeToAttack / weaponData.stats.speed);
+        //playerController.GetAnimator().SetFloat("Speed", weaponData.stats.speed);
+        canAttack = true;
 
-    //}
+    }
 	
 	void Update()
 	{

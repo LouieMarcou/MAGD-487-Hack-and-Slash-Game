@@ -16,6 +16,5 @@ MonoBehaviour:
   upgradeType: 1
   UpgradeBasePrefab: {fileID: 3460172890430375512, guid: be1d2a358036b41eb829314a8b5db747, type: 3}
   uniqueNumber: 10
-  unique: 1
   icon: {fileID: 0}
   UpgradeText: Heal for 10% damage you deal

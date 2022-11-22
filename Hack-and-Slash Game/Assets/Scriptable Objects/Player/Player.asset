@@ -16,13 +16,5 @@ MonoBehaviour:
   stats:
     health: 100
     stamina: 100
-    speed: 5
+    speed: 10
   playerBasePrefab: {fileID: 5619710742736197431, guid: d465eb7e0fb634bbe92434643a02a25f, type: 3}
-  regularUpgrades:
-  - {fileID: 11400000, guid: 7f369793d0bd040bd9a6d636bb3c2c1a, type: 2}
-  - {fileID: 11400000, guid: 2d06cd2601de981419ba2fe37bc30e18, type: 2}
-  - {fileID: 11400000, guid: f78e3668322e7fc40ae75f025557b2ca, type: 2}
-  specialUpgrades:
-  - {fileID: 11400000, guid: 9eacf266b834fc146a0436be95f01007, type: 2}
-  - {fileID: 11400000, guid: 02bd959ec138b124190ba8101169065c, type: 2}
-  - {fileID: 11400000, guid: af06c3c0a1641d04fa690afbdd9472b4, type: 2}

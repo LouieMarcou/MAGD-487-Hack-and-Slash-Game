@@ -13,9 +13,4 @@ MonoBehaviour:
   m_Name: Set 1
   m_EditorClassIdentifier: 
   Name: Set 1
-  Waves:
-  - {fileID: 11400000, guid: a62d8bdc042979e44a3e2bd529c0039d, type: 2}
-  - {fileID: 11400000, guid: b1c37fc01a277ff4ca5f1803ddcccd24, type: 2}
-  - {fileID: 11400000, guid: c578e970cdbe844af9dadf0173d001c6, type: 2}
-  - {fileID: 11400000, guid: c5ceff64d6a324ba395c9a2b1c6667c7, type: 2}
-  - {fileID: 11400000, guid: 4f15bb7443b6849af865dfb6ab0ee617, type: 2}
+  Waves: []
