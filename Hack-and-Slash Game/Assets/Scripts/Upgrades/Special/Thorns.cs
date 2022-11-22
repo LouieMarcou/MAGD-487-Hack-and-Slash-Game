@@ -1,9 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Thorns : PlayerUpgradeBase
+public class Thorns : MonoBehaviour
 {
-    public override void ApplyEffects(PlayerController player)
+    public UpgradeData upgradeData; 
+
+    public void ReflectDamage(EnemyBase enemy)
     {
-        player.ActivateThorns(upgradeData.uniqueNumber);
+        enemy.TakeDamage(enemy.enemyData.stats.damage * (upgradeData.uniqueNumber * 0.01f));
     }
 }

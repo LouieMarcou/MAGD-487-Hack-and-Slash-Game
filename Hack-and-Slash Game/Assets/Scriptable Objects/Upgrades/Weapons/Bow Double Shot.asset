@@ -16,6 +16,5 @@ MonoBehaviour:
   upgradeType: 1
   UpgradeBasePrefab: {fileID: 3780902186121994113, guid: 816855322df1eb54cad33905240f2278, type: 3}
   uniqueNumber: 1
-  unique: 1
   icon: {fileID: 0}
   UpgradeText: Increase the number of arrows fired by 1

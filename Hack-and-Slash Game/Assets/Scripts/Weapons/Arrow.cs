@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    private Bow weapon;
+    private Bow wp;
 
     private Vector3 shootPoint;
     private Transform BowParent;
@@ -15,12 +15,8 @@ public class Arrow : MonoBehaviour
     {
         shootPoint = transform.localPosition;
         BowParent = transform.parent;
-        weapon = BowParent.gameObject.GetComponent<Bow>();
+        wp = BowParent.gameObject.GetComponent<Bow>();
         rb = GetComponent<Rigidbody>();
-        //Debug.Log(weapon);
-        //Debug.Log(GetComponent<CollisionDetection>().wp);
-        
-        //Debug.Log(GetComponent<CollisionDetection>().wp);
     }
 
     void Update()
@@ -29,25 +25,26 @@ public class Arrow : MonoBehaviour
         //    SpinObject();
     }
 
-    //void OnTriggerEnter(Collider collision)
-    //{
-    //    //Debug.Log(collision.name);
-    //    if (collision.tag == "Enemy" && wp.isAttacking)
-    //    {
-    //        //Debug.Log(collision.name);
-    //        collision.GetComponent<EnemyBase>().TakeDamage(wp.weaponData.stats.damage);
-    //        gameObject.SetActive(false);
-    //    }
-    //    if(collision.tag == "Ground" && wp.isAttacking)
-    //    {
-    //        //gameObject.SetActive(false);
-    //        //Debug.Log("hit ground");
-    //    }
-    //}
+    void OnTriggerEnter(Collider collision)
+    {
+        //Debug.Log(collision.name);
+        if (collision.tag == "Enemy" && wp.isAttacking)
+        {
+            //Debug.Log(collision.name);
+            collision.GetComponent<EnemyBase>().TakeDamage(wp.weaponData.stats.damage);
+            gameObject.SetActive(false);
+        }
+        if(collision.tag == "Ground" && wp.isAttacking)
+        {
+            //gameObject.SetActive(false);
+            //Debug.Log("hit ground");
+            //Reset();
+        }
+    }
 
     public void Shoot()
     {
-        rb.AddRelativeForce(Vector3.right * 1000f * weapon.weaponData.stats.speed, ForceMode.Force);
+        rb.AddRelativeForce(Vector3.right * 1000f * wp.weaponData.stats.speed, ForceMode.Force);
         rb.useGravity = true;
         //Debug.Log(wp.isAttacking);
     }
@@ -83,7 +80,6 @@ public class Arrow : MonoBehaviour
 
     public void SetBow(Bow bow)
     {
-        weapon = bow;
-        GetComponent<CollisionDetection>().wp = weapon;
+        wp = bow;
     }
 }

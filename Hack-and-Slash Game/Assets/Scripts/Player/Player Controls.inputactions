@@ -29,7 +29,7 @@
                     "id": "06ac1d46-3821-4ff3-ad5c-81aadd33dffd",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Tap,Hold",
+                    "interactions": "Tap,Hold(pressPoint=0.3)",
                     "initialStateCheck": false
                 },
                 {
@@ -54,15 +54,6 @@
                     "name": "Pause",
                     "type": "Button",
                     "id": "39a82715-6e8f-41d2-974a-5cf02f513db5",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Dash",
-                    "type": "PassThrough",
-                    "id": "32071ac1-688e-4e55-9cee-bbc7a920f035",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -320,17 +311,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "257b1b22-102a-456e-9dd5-2754e1ea349a",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

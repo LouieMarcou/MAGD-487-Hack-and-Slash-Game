@@ -1,12 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerFlatStatIncrease : PlayerUpgradeBase
+public class PlayerFlatStatIncrease : MonoBehaviour
 {
-    public override void ApplyEffects(PlayerController player)
+	public UpgradeData upgradeData;
+	
+    public void ApplyEffects(PlayerController player)
 	{
-		player.playerData.stats.health += 25f;
-		player.playerData.stats.stamina += 25f;
-		//player.playerData.stats.health += 1f;
+		player.playerData.stats.health += 50f;
+		player.playerData.stats.stamina += 50f;
+		player.playerData.stats.health += 1f;
 		
 	}
 }

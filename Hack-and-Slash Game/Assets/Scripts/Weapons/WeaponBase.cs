@@ -16,22 +16,11 @@ public abstract class WeaponBase : MonoBehaviour
     public WaitForSeconds timer;
 
     public bool isAttacking = false;
-    public bool canAttack;
 
     void Awake()
     {
         timer = new WaitForSeconds(weaponData.stats.timeToAttack);
         
-    }
-
-    void Start()
-    {
-        playerController.GetAnimator().speed = weaponData.stats.speed;
-        timer = new WaitForSeconds(weaponData.stats.timeToAttack / weaponData.stats.speed);
-        //timer = new WaitForSeconds(weaponData.stats.timeToAttack);
-        Debug.Log(weaponData.stats.timeToAttack + " / " + weaponData.stats.speed + " = " + weaponData.stats.timeToAttack / weaponData.stats.speed);
-        playerController.GetAnimator().SetFloat("Speed", weaponData.stats.speed);
-        canAttack = true;
     }
 
     public virtual void StoreOrginialData(WeaponData wd)
@@ -48,11 +37,6 @@ public abstract class WeaponBase : MonoBehaviour
         weaponStats = new WeaponStats(wd.stats.damage, wd.stats.timeToAttack, wd.stats.speed);
     }
 
-    public WeaponStats GetOrginialStats()
-    {
-        return orginialWeaponStats;
-    }
-
     public abstract IEnumerator AttackCooldown();
 
     public abstract void Attack();
@@ -61,12 +45,14 @@ public abstract class WeaponBase : MonoBehaviour
     {
         if (orginialWeaponStats != null)
         {
-            //Debug.Log(gameObject);
-            //Debug.Log(weaponStats.damage);
+            Debug.Log(gameObject);
             weaponData.stats = orginialWeaponStats;
-            //Debug.Log(weaponStats.damage);
 
-
+            //weaponData.stats.damage = orginialWeaponStats.damage;
+            //weaponData.stats.timeToAttack = orginialWeaponStats.timeToAttack;
+            //weaponData.stats.AttackSize = orginialWeaponStats.AttackSize;
+            //weaponData.stats.range = orginialWeaponStats.range;
+            //weaponData.stats.speed = orginialWeaponStats.speed;
         }
 
     }
