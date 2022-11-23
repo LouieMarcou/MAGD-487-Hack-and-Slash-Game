@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     private PlayerStats orginialPlayerStats;
 	
     [Header("Speed")]
-    [SerializeField] private float playerSpeed = 10.0f;
-    private float originalSpeed;
+    [SerializeField] private float currentSpeed = 5f;
+    [SerializeField] private float baseSpeed;
     [SerializeField] private float sprintSpeed = 5f;
     private bool isSprinting;
 
@@ -41,12 +41,12 @@ public class PlayerController : MonoBehaviour
 	private WaitForSeconds healthRegenTick = new WaitForSeconds(5f);//varaible needs testing
 	public Slider healthBar;
 
-    //[Header("Stamina")]
+    [Header("Stamina")]
+    public float currentStamina;
     private Coroutine staminaRegen;
     private WaitForSeconds staminaRegenTick = new WaitForSeconds(0.1f);//needs testing
     private WaitForSeconds staminaRegenWait = new WaitForSeconds(2f);
     public float staminaMax = 100f;
-    public float currentStamina;
     private float staminaDrain = 15f;
     public Slider staminaBar;
 
@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
         currentStamina = staminaMax;
 
         healthMax = health;
+        baseSpeed = currentSpeed;
     }
 
     // Start is called before the first frame update
@@ -161,6 +162,13 @@ public class PlayerController : MonoBehaviour
         {
             //Debug.Log("is sprinting");
             isSprinting = true;
+            currentSpeed = baseSpeed + sprintSpeed;
+        }
+        if(context.canceled)
+        {
+            //Debug.Log("Let go of sprint button");
+            isSprinting = false;
+            currentSpeed = baseSpeed;
         }
 
     }
@@ -188,7 +196,7 @@ public class PlayerController : MonoBehaviour
             playerVelocity.y = 0f;
         } 
         Vector3 move = (transform.right * movementInput.x + transform.forward * movementInput.y);
-        controller.Move(move * Time.deltaTime * (playerSpeed + sprintSpeed));
+        controller.Move(move * Time.deltaTime * currentSpeed);
         //Debug.Log(controller.velocity);
 
         if (jumped && groundedPlayer)
@@ -207,11 +215,11 @@ public class PlayerController : MonoBehaviour
     {
         if (isSprinting)
         {
-            sprintSpeed = 5;
+            currentSpeed = baseSpeed + sprintSpeed;
         }
         else if (isSprinting == false)
         {
-            sprintSpeed = 0;
+            currentSpeed = baseSpeed;
         }
     }
 
@@ -228,6 +236,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isSprinting)
         {
+            UpdateSprint();
             if (currentStamina >= 0)
             {
                 currentStamina -= staminaDrain * Time.deltaTime;

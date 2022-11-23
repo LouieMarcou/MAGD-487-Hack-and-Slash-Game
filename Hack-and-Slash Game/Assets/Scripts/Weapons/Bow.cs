@@ -15,6 +15,8 @@ public class Bow : WeaponBase
 	private float secondShotDelayFloat = 0.2f;
 	private WaitForSeconds secondShotDelayTime;
 
+	//public Camera camera;
+
 	// Start is called before the first frame update
 	void Start()
     {
@@ -22,8 +24,6 @@ public class Bow : WeaponBase
 		//arrowClone.GetComponent<Arrow>().SetParent(transform);
 		canAttack = true;
 		arrowObjectPool = GameObject.Find("ArrowObjectPool").GetComponent<ObjectPool>();
-
-
 
 		for (int i = 0; i < numShots; i++)
         {

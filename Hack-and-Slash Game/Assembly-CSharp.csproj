@@ -53,19 +53,26 @@
     <UnityVersion>2021.3.9f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\Enemies\EnemyBase.cs" />
     <Compile Include="Assets\Scripts\Player\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Special\Dash.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\Collectable\HealthDrop.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\WeaponSpeedIncrease.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponBase.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\AxeChargeAttack.cs" />
     <Compile Include="Assets\Scripts\Upgrades\UpgradeData.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Upgrades\UpgradeManager.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\Lifesteal.cs" />
     <Compile Include="Assets\Scripts\Enemies\Set.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Special\Thorns.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\PlayerUpgradeBase.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\WeaponBuff.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Player Upgrades\PlayerFlatStatIncrease.cs" />
     <Compile Include="Assets\Scripts\EnemyObjectPool.cs" />
@@ -77,6 +84,7 @@
     <Compile Include="Assets\Scripts\Weapons\Arrow.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\BowDoubleShot.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\WeaponUpgrade.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Player Upgrades\PlayerSpeedIncrease.cs" />
     <Compile Include="Assets\Scripts\CollisionDetection.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\Enemies\WaveData.cs" />
@@ -84,9 +92,11 @@
     <Compile Include="Assets\Scripts\Weapons\Bow.cs" />
     <Compile Include="Assets\Scripts\Collectable\Item.cs" />
     <Compile Include="Assets\Scripts\Upgrades\UpgradePanelManager.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Special\CritcalStrike.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Weapons\Sword.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Player Upgrades\PlayerHealthRegenIncrease.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyData.cs" />
   </ItemGroup>

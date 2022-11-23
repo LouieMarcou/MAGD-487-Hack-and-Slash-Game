@@ -18,4 +18,4 @@ MonoBehaviour:
   uniqueNumber: 0
   unique: 1
   icon: {fileID: 0}
-  UpgradeText: Dash in the direction you are facing.
+  UpgradeText: Dash in the direction you are facing. Press 'E'

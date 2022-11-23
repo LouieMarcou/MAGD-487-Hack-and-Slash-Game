@@ -29,22 +29,6 @@ public class Arrow : MonoBehaviour
         //    SpinObject();
     }
 
-    //void OnTriggerEnter(Collider collision)
-    //{
-    //    //Debug.Log(collision.name);
-    //    if (collision.tag == "Enemy" && wp.isAttacking)
-    //    {
-    //        //Debug.Log(collision.name);
-    //        collision.GetComponent<EnemyBase>().TakeDamage(wp.weaponData.stats.damage);
-    //        gameObject.SetActive(false);
-    //    }
-    //    if(collision.tag == "Ground" && wp.isAttacking)
-    //    {
-    //        //gameObject.SetActive(false);
-    //        //Debug.Log("hit ground");
-    //    }
-    //}
-
     public void Shoot()
     {
         rb.AddRelativeForce(Vector3.right * 1000f * weapon.weaponData.stats.speed, ForceMode.Force);
