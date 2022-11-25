@@ -341,6 +341,7 @@
 "Assets/Scripts/Collectable/HealthDrop.cs"
 "Assets/Scripts/Collectable/Item.cs"
 "Assets/Scripts/CollisionDetection.cs"
+"Assets/Scripts/Enemies/Archer.cs"
 "Assets/Scripts/Enemies/Enemy.cs"
 "Assets/Scripts/Enemies/EnemyBase.cs"
 "Assets/Scripts/Enemies/EnemyData.cs"

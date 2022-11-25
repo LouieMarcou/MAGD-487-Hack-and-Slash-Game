@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [Header("Speed")]
     [SerializeField] private float currentSpeed = 5f;
     [SerializeField] private float baseSpeed;
+    private bool isMoving;
     [SerializeField] private float sprintSpeed = 5f;
     private bool isSprinting;
 
@@ -79,6 +80,8 @@ public class PlayerController : MonoBehaviour
 
         healthMax = health;
         baseSpeed = currentSpeed;
+
+        state = PlayerState.walking;
     }
 
     // Start is called before the first frame update
@@ -185,19 +188,65 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public PlayerState state;
+    public enum PlayerState
+    {
+        walking,
+        jumping,
+        sprinting,
+        paused
+    }
+
     // Update is called once per frame
     void Update()
     {
+        MovePlayer();
         groundedPlayer = controller.isGrounded;
-        if (isSprinting)
-            UpdateStamina();
+
+        look.ReceiveInput(mouseInput);
+        StateHandler();
+    }
+
+    private void StateHandler()
+    {
+        if(groundedPlayer)
+        {
+            //Debug.Log("is on the ground");
+            state = PlayerState.walking;
+        }
+
+        else if(isSprinting)
+        {
+            //Debug.Log("is sprinting");
+            state = PlayerState.sprinting;
+        }
+    }
+
+    private void MovePlayer()
+    {
+        if(state == PlayerState.walking)
+        {
+            MoveController();
+        }
+
+        if(state == PlayerState.sprinting)
+        {
+            if (isSprinting)
+                UpdateStamina();
+            MoveController();
+        }
+        
+    }
+
+    private void MoveController()
+    {
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
-        } 
+        }
+
         Vector3 move = (transform.right * movementInput.x + transform.forward * movementInput.y);
         controller.Move(move * Time.deltaTime * currentSpeed);
-        //Debug.Log(controller.velocity);
 
         if (jumped && groundedPlayer)
         {
@@ -206,8 +255,6 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-
-        look.ReceiveInput(mouseInput);
     }
 
     //Makes player sprint or cancels it
@@ -289,6 +336,7 @@ public class PlayerController : MonoBehaviour
 		{
 			health += healthRegenAmount;//variable needs testing
 			healthBar.value = health;
+            Debug.Log(health);
 			yield return healthRegenTick;
 		}
 		healthRegen = null;

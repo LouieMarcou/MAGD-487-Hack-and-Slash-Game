@@ -4703,6 +4703,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5619710742736197429, guid: d465eb7e0fb634bbe92434643a02a25f, type: 3}
+      propertyPath: currentSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619710742736197429, guid: d465eb7e0fb634bbe92434643a02a25f, type: 3}
       propertyPath: currentStamina
       value: 100
       objectReference: {fileID: 0}

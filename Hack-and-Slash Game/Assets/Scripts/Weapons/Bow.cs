@@ -95,9 +95,9 @@ public class Bow : WeaponBase
 
 	private IEnumerator TimeBetweenShots()
     {
-		Debug.Log("waiting for next shot");
+		//Debug.Log("waiting for next shot");
 		yield return secondShotDelayTime;
-		Debug.Log("next shot");
+		//Debug.Log("next shot");
 		arrows[1].GetComponent<Arrow>().Shoot();
 		StartCoroutine(AttackCooldown());
 	}

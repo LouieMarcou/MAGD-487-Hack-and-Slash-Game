@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Wave 5
   m_EditorClassIdentifier: 
   WaveName: Wave 5
-  EnemyTypes: []
-  EnemyAmountForEachType: 
+  EnemyTypes:
+  - {fileID: 11400000, guid: 1bdee8dab35054aeab496d8bfc2ddd1c, type: 2}
+  - {fileID: 11400000, guid: 66e0a6e6690b8f4469b3007a6f02f600, type: 2}
+  - {fileID: 11400000, guid: 9a1a8d4eb45b64a1baaebf5d6205249d, type: 2}
+  EnemyAmountForEachType: 050000000200000001000000
   KillCount: 0

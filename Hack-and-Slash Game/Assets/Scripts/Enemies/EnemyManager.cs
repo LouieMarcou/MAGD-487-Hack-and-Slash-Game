@@ -15,6 +15,7 @@ public class EnemyManager : MonoBehaviour
     private float timer = 2f;
     private bool stop = false;
     private bool isWaveOver = false;
+    private bool isSetOver = false;
 
     [SerializeField] private UpgradeManager upgradeManager;
 
@@ -30,7 +31,7 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if (timer < 0 && stop == false)
+        if (timer < 0 && stop == false && isSetOver == false)
         {
             StartWave();
             stop = true;
@@ -40,20 +41,22 @@ public class EnemyManager : MonoBehaviour
             //waveText.gameObject.SetActive(true);
             isWaveOver = true;
             waveCount++;
+            currentWave.KillCount = 0;
             upgradeManager.Run();
 
         }
-        if(waveCount > currentSet.Waves.Count)
-        {
-            Debug.Log("Set is over");
-        }
+        //if(waveCount > currentSet.Waves.Count)
+        //{
+        //    Debug.Log("Set is over");
+        //    isSetOver = true;
+        //}
     }
 
     //Will start the next wave by getting the total enemies of the wave
     //Will find the object pools belonging to each enemy in the wave and allow them to spawn
     private void StartWave()
     {
-        //Debug.Log("starting wave " + (waveCount + 1) );
+        Debug.Log("starting wave " + (waveCount + 1) );
         currentWave.CalculateTotalEnemies();
         
 		for(int i = 0; i < currentWave.EnemyAmountForEachType.Count; i++)
@@ -72,7 +75,13 @@ public class EnemyManager : MonoBehaviour
         timer = 2f;
         stop = false;
         isWaveOver = false;
-        currentWave = waves[waveCount];
+        if(waveCount < currentSet.Waves.Count)
+            currentWave = currentSet.Waves[waveCount];
+        else
+        {
+            Debug.Log("Set is over");
+            isSetOver = true;
+        }
     }
 
     public WaveData GetCurrentWave()

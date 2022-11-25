@@ -8,7 +8,8 @@ public class EnemyStats
 	public float damage;
 	public float speed;
 	public float timeToAttack;
-	
+	public float armor;
+
 	public EnemyStats(float health, float damage, float speed, float timeToAttack)
 	{
 		this.health = health;
