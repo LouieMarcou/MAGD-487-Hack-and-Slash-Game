@@ -10,12 +10,13 @@ public class EnemyStats
 	public float timeToAttack;
 	public float armor;
 
-	public EnemyStats(float health, float damage, float speed, float timeToAttack)
+	public EnemyStats(float health, float damage, float speed, float timeToAttack, float armor)
 	{
 		this.health = health;
 		this.damage = damage;
 		this.speed = speed;
 		this.timeToAttack = timeToAttack;
+		this.armor = armor;
 	}
 }
 

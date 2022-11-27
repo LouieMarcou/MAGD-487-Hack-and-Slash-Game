@@ -11,6 +11,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private WaveData currentWave;
     [SerializeField] private TMP_Text waveText;
     private int waveCount = 0;
+    private int setCount;
 
     private float timer = 2f;
     private bool stop = false;
@@ -18,6 +19,11 @@ public class EnemyManager : MonoBehaviour
     private bool isSetOver = false;
 
     [SerializeField] private UpgradeManager upgradeManager;
+
+    [SerializeField] private TMP_Text restTimerText;
+    private float restTime = 10f;
+
+    //Make state machine???
 
     // Start is called before the first frame update
     void Start()
@@ -45,11 +51,22 @@ public class EnemyManager : MonoBehaviour
             upgradeManager.Run();
 
         }
-        //if(waveCount > currentSet.Waves.Count)
-        //{
-        //    Debug.Log("Set is over");
-        //    isSetOver = true;
-        //}
+        if(isSetOver)
+        {
+            if (setCount < sets.Count)
+            {
+                restTime -= Time.deltaTime;
+                restTimerText.text = Mathf.RoundToInt(restTime).ToString();
+                if (restTime <= 0)
+                {
+                    restTimerText.text = "";
+                    restTime = 10f;
+                    setCount++;
+                    currentSet = sets[setCount];
+                    isSetOver = false;
+                }
+            }
+        }
     }
 
     //Will start the next wave by getting the total enemies of the wave

@@ -54,14 +54,14 @@ public class EnemyBase : MonoBehaviour
 	public virtual void SetData(EnemyData ed)
     {
         enemyData = ed;
-        //timeToAttack = enemyData.stats.timeToAttack;
 
-        enemyStats = new EnemyStats(ed.stats.health, ed.stats.damage, ed.stats.speed, ed.stats.timeToAttack);
+        enemyStats = new EnemyStats(ed.stats.health, ed.stats.damage, ed.stats.speed, ed.stats.timeToAttack, ed.stats.armor);
     }
 
     //Subtracts damage from player health
     public void TakeDamage(float damage)
     {
+        damage = damage * (1f - (enemyData.stats.armor * 0.01f))*0.8f;
         currentHealth -= damage;
 		//Debug.Log(currentHealth);
     }

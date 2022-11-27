@@ -52,10 +52,11 @@ MonoBehaviour:
     damage: 0
     timeToAttack: 0
     speed: 0
-  timeToAttack: 1
-  speed: 1
   playerController: {fileID: 0}
   isAttacking: 0
+  canAttack: 0
+  hitMarkerPrefab: {fileID: 1204934845149455529, guid: fc18a4cc394584e49898ce69247d1398, type: 3}
+  hitMarker: {fileID: 0}
 --- !u!65 &3218789039423893730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -82,6 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wp: {fileID: -6652630927149558145}
+  hitMarker: {fileID: 1204934845149455529, guid: fc18a4cc394584e49898ce69247d1398, type: 3}
 --- !u!1001 &6809856264133952821
 PrefabInstance:
   m_ObjectHideFlags: 0

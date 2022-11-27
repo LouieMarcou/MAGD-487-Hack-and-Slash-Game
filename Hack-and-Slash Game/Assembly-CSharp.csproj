@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Upgrades\Special\Dash.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\Collectable\HealthDrop.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\WeaponSpeedIncrease.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponBase.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\AxeChargeAttack.cs" />
@@ -99,7 +100,6 @@
     <Compile Include="Assets\Scripts\Upgrades\Player Upgrades\PlayerHealthRegenIncrease.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyData.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

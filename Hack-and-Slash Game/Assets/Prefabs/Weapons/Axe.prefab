@@ -54,6 +54,9 @@ MonoBehaviour:
     speed: 0
   playerController: {fileID: 0}
   isAttacking: 0
+  canAttack: 0
+  hitMarkerPrefab: {fileID: 1204934845149455529, guid: fc18a4cc394584e49898ce69247d1398, type: 3}
+  hitMarker: {fileID: 0}
 --- !u!65 &-168913513435942644
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -18,10 +18,15 @@ public abstract class WeaponBase : MonoBehaviour
     public bool isAttacking = false;
     public bool canAttack;
 
+    public GameObject hitMarkerPrefab;
+    public GameObject hitMarker;
+    private WaitForSeconds timeToShow = new WaitForSeconds(0.1f);
+
     void Awake()
     {
         timer = new WaitForSeconds(weaponData.stats.timeToAttack);
-        
+        hitMarker = Instantiate(hitMarkerPrefab, GameObject.Find("Player Canvas").transform);
+        hitMarker.SetActive(false);
     }
 
     void Start()
@@ -32,6 +37,7 @@ public abstract class WeaponBase : MonoBehaviour
         //Debug.Log(weaponData.stats.timeToAttack + " / " + weaponData.stats.speed + " = " + weaponData.stats.timeToAttack / weaponData.stats.speed);
         playerController.GetAnimator().SetFloat("Speed", weaponData.stats.speed);
         canAttack = true;
+        
     }
 
     public virtual void StoreOrginialData(WeaponData wd)
@@ -57,16 +63,23 @@ public abstract class WeaponBase : MonoBehaviour
 
     public abstract void Attack();
 
+    public virtual void HitMarkerCoroutine()
+    {
+        StartCoroutine(ShowHitMarker());
+    }
+
+    public virtual IEnumerator ShowHitMarker()
+    {
+        hitMarker.SetActive(true);
+        yield return timeToShow;
+        hitMarker.SetActive(false);
+    }
+
     private void OnDisable()
     {
         if (orginialWeaponStats != null)
         {
-            //Debug.Log(gameObject);
-            //Debug.Log(weaponStats.damage);
             weaponData.stats = orginialWeaponStats;
-            //Debug.Log(weaponStats.damage);
-
-
         }
 
     }

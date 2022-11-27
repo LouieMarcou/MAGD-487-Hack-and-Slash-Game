@@ -25,8 +25,7 @@ public class Arrow : MonoBehaviour
 
     void Update()
     {
-        //if(wp.isAttacking)
-        //    SpinObject();
+
     }
 
     public void Shoot()
@@ -47,17 +46,6 @@ public class Arrow : MonoBehaviour
         rb.useGravity = false;
         gameObject.SetActive(true);
 
-    }
-
-    private void SpinObject()
-    {
-        float yVelocity = rb.velocity.y;
-        float zVelocity = rb.velocity.z;
-        float xVelocity = rb.velocity.x;
-        float combinedVelocity = Mathf.Sqrt(xVelocity * xVelocity + zVelocity * zVelocity);
-        float fallAngle = -1 * Mathf.Atan2(yVelocity, combinedVelocity) * 180 / Mathf.PI;
-
-        transform.eulerAngles = new Vector3(fallAngle, transform.eulerAngles.y, transform.eulerAngles.x);
     }
 
     public void SetParent(Transform parent)

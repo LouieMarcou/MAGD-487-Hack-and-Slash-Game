@@ -6,6 +6,7 @@ public class CollisionDetection : MonoBehaviour
 {
     public WeaponBase wp;
 
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.tag == "Enemy" && wp.isAttacking)
@@ -47,7 +48,7 @@ public class CollisionDetection : MonoBehaviour
                 //Debug.Log(wp.gameObject.GetComponent<Sword>().GetLifestealAmount());
                 wp.playerController.AddHealth(damage * wp.gameObject.GetComponent<Sword>().GetLifestealAmount());
             }
-
+            wp.HitMarkerCoroutine();
         }
 
 

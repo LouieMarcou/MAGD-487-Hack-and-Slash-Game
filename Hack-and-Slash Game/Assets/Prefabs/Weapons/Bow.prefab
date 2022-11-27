@@ -52,9 +52,11 @@ MonoBehaviour:
     speed: 0
   playerController: {fileID: 0}
   isAttacking: 0
+  canAttack: 0
+  hitMarkerPrefab: {fileID: 1204934845149455529, guid: fc18a4cc394584e49898ce69247d1398, type: 3}
+  hitMarker: {fileID: 0}
   arrowPrefab: {fileID: 8350191423664846446, guid: e2ab1c03bd7d8495584bba4a38a70076, type: 3}
   arrows: []
-  crosshair: {fileID: 6162527919668324382, guid: 6c5707f5e89da8e49afe3ba5b5e0adf7, type: 3}
 --- !u!1001 &1743400560078273780
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -18,4 +18,5 @@ MonoBehaviour:
     damage: 15
     speed: 2
     timeToAttack: 1.5
+    armor: 5
   EnemyBasePrefab: {fileID: 9004801868831910648, guid: 0770fe0b96bb240729be43b2abd6b1ae, type: 3}
