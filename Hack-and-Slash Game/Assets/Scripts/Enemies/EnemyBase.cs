@@ -61,7 +61,7 @@ public class EnemyBase : MonoBehaviour
     //Subtracts damage from player health
     public void TakeDamage(float damage)
     {
-        damage = damage * (1f - (enemyData.stats.armor * 0.01f))*0.8f;
+        damage = damage * (1f - (enemyData.stats.armor * 0.01f));
         currentHealth -= damage;
 		//Debug.Log(currentHealth);
     }
