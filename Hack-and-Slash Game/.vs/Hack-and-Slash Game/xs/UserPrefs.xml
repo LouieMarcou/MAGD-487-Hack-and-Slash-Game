@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{79363A35-A980-91EA-5976-F0D6E9674986}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Score.cs" Line="12" Column="25" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="442" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/EnemyManager.cs" Line="125" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Hack-and-Slash Game" expanded="True" selected="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Enemies" expanded="True" />
+                <Node name="Player" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="449105ce-ff45-4295-9c29-fbdb6e68fef0" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
