@@ -100,5 +100,6 @@ public class EnemyBase : MonoBehaviour
     private void AddToKillCount()
     {
         enemyManager.GetCurrentWave().KillCount++;
+        enemyManager.totalEnmiesKilled++;
     }
 }
