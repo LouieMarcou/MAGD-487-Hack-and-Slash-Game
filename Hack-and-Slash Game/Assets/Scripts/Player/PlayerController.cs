@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
     private float healthRegenAmount = 2f;
 	private WaitForSeconds healthRegenTick = new WaitForSeconds(5f);//varaible needs testing
 	public Slider healthBar;
-    private bool isAlive = true;
 
     [Header("Stamina")]
     public float currentStamina;
@@ -70,9 +69,7 @@ public class PlayerController : MonoBehaviour
 
     private bool hasThorns = false;
     private float reflectPercentage = 0f;
-
-    [SerializeField] private Score score;
-
+	
     void Awake()
     {
 		SetData(playerData);
@@ -349,13 +346,6 @@ public class PlayerController : MonoBehaviour
     {
         health -= damage;
 		healthBar.value = health;
-        score.AddToDamageTaken(damage);
-        if(health <= 0)
-        {
-            isAlive = false;
-            score.SetNumUpgrades(upgrades.Count);
-            score.SetScore();
-        }
         //Debug.Log(health);
         if(hasThorns)
         {
@@ -458,10 +448,5 @@ public class PlayerController : MonoBehaviour
     public float GetCritChance()
     {
         return critChance;
-    }
-
-    public bool GetIsAlive()
-    {
-        return isAlive;
     }
 }
