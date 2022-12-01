@@ -22,6 +22,7 @@ public class EnemyManager : MonoBehaviour
 
     [SerializeField] private TMP_Text restTimerText;
     private float restTime = 10f;
+    public float totalEnmiesKilled;
 
     //Make state machine???
 
@@ -45,6 +46,7 @@ public class EnemyManager : MonoBehaviour
         else if(stop && currentWave.KillCount == currentWave.GetTotalEnemies() && isWaveOver == false)
         {
             //waveText.gameObject.SetActive(true);
+
             isWaveOver = true;
             waveCount++;
             currentWave.KillCount = 0;
@@ -65,6 +67,10 @@ public class EnemyManager : MonoBehaviour
                     currentSet = sets[setCount];
                     isSetOver = false;
                 }
+            }
+            else
+            {
+                EndGame();
             }
         }
     }
@@ -99,6 +105,12 @@ public class EnemyManager : MonoBehaviour
             Debug.Log("Set is over");
             isSetOver = true;
         }
+    }
+
+    private void EndGame()
+    {
+        GetComponent<Score>().SetScore();
+
     }
 
     public WaveData GetCurrentWave()
