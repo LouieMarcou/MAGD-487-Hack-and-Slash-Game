@@ -7,6 +7,7 @@ public class EnemyBase : MonoBehaviour
 	public EnemyData enemyData;
 	
 	public EnemyStats enemyStats;
+	private EnemyStats orginialEnemyStats;
 	
 	[SerializeField] private GameObject player;
 	
@@ -49,6 +50,13 @@ public class EnemyBase : MonoBehaviour
             
         }
     }
+	
+	private void StoreOriginalData(EnemyData ed)
+	{
+		enemyData = ed;
+
+        orginialEnemyStats = new EnemyStats(ed.stats.health, ed.stats.damage, ed.stats.speed, ed.stats.timeToAttack, ed.stats.armor);
+	}
 	
     //Sets enemy stats
 	public virtual void SetData(EnemyData ed)
@@ -102,4 +110,12 @@ public class EnemyBase : MonoBehaviour
         enemyManager.GetCurrentWave().KillCount++;
         enemyManager.totalEnmiesKilled++;
     }
+	
+	void OnDisable()
+	{
+		if(orginialEnemyStats != null)
+		{
+			enemyData.stats = orginialEnemyStats;
+		}
+	}
 }

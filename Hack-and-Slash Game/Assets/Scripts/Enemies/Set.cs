@@ -7,4 +7,5 @@ public class Set : ScriptableObject
 {
     public string Name;
 	public List<WaveData> Waves;
+	public float statModifier;
 }

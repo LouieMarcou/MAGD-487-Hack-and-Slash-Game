@@ -20,7 +20,7 @@ public class CollisionDetection : MonoBehaviour
                 //Debug.Log(chance);
                 if (chance <= wp.GetComponentInParent<PlayerController>().GetCritChance())
                 {
-                    // Debug.Log("crit");
+                    Debug.Log("crit");
                     damage *= wp.GetComponentInParent<PlayerController>().GetCritMultiplier();
                 }
             }

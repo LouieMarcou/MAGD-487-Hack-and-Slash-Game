@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5176,6 +5176,11 @@ MonoBehaviour:
   upgradeManager: {fileID: 1346969738}
   restTimerText: {fileID: 1680713520}
   totalEnmiesKilled: 0
+  Enemies:
+  - {fileID: 11400000, guid: 1bdee8dab35054aeab496d8bfc2ddd1c, type: 2}
+  - {fileID: 11400000, guid: 66e0a6e6690b8f4469b3007a6f02f600, type: 2}
+  - {fileID: 11400000, guid: c33fabc7e72404d2faf2c5438cc55b0b, type: 2}
+  - {fileID: 11400000, guid: 9a1a8d4eb45b64a1baaebf5d6205249d, type: 2}
 --- !u!114 &1346969738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5567,7 +5572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Total Time is
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

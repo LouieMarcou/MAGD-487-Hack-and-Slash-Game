@@ -25,8 +25,10 @@ public class Score : MonoBehaviour
 
     public void SetScore()
     {
+	Debug.Log("Game is over");
         Time.timeScale = 0;
         player.enabled = false;
+		numberOfUpgrades = player.upgrades.Count;
         enemiesKilled = GetComponent<EnemyManager>().totalEnmiesKilled;
         endgamePanel.SetActive(true);
         if (player.GetIsAlive())
@@ -36,11 +38,11 @@ public class Score : MonoBehaviour
         }
         else
             winLossText.text = "You lose!";
-        timeText.text = "Total time is " + totalTime;
+        //timeText.text = "Total time is " + totalTime;
         enemiesKilledText.text = "You have killed " + enemiesKilled + " enemies";
         numUpgradesText.text = "The number of upgrades you have is " + numberOfUpgrades;
         damageTakenText.text = "The amount of damage you have taken is " + damageTaken;
-        scoreTotal = scoreTotal + (enemiesKilled * 100) +(numberOfUpgrades * 500) - (damageTaken * 5);
+        scoreTotal = scoreTotal + (enemiesKilled * 100) + (numberOfUpgrades * 500) - (damageTaken * 5);
         scoreText.text = "Your score is " + scoreTotal;
     }
 

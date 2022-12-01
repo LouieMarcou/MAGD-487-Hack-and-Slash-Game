@@ -17,12 +17,15 @@ public class EnemyManager : MonoBehaviour
     private bool stop = false;
     private bool isWaveOver = false;
     private bool isSetOver = false;
+	private bool isGameOver = false;
 
     [SerializeField] private UpgradeManager upgradeManager;
 
     [SerializeField] private TMP_Text restTimerText;
     private float restTime = 10f;
     public float totalEnmiesKilled;
+	
+	public List<EnemyData> Enemies;
 
     //Make state machine???
 
@@ -32,6 +35,7 @@ public class EnemyManager : MonoBehaviour
         currentSet = sets[0];
         currentWave = sets[0].Waves[waveCount];
         Debug.Log(currentWave);
+		modifyEnemyStats();
     }
 
     // Update is called once per frame
@@ -66,11 +70,13 @@ public class EnemyManager : MonoBehaviour
                     setCount++;
                     currentSet = sets[setCount];
                     isSetOver = false;
+					modifyEnemyStats();
                 }
             }
             else
             {
-                EndGame();
+				if(isGameOver == false)
+                	EndGame();
             }
         }
     }
@@ -106,10 +112,23 @@ public class EnemyManager : MonoBehaviour
             isSetOver = true;
         }
     }
+	
+	public void modifyEnemyStats()
+	{
+		foreach(EnemyData enemy in Enemies)
+		{
+			enemy.stats.health *= currentSet.statModifier;
+			enemy.stats.damage *= currentSet.statModifier;
+			enemy.stats.armor *= currentSet.statModifier;
+			//enemy.stats.speed *= currentSet.statModifier;
+		}
+	}
 
     private void EndGame()
     {
         GetComponent<Score>().SetScore();
+		isGameOver = true;
+
 
     }
 
