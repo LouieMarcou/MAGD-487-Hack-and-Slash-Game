@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class MouseLook : MonoBehaviour
 {
-    [SerializeField] float sensitivityX = 8f;
+    [SerializeField] float sensitivityX = 100f;
     [SerializeField] float sensitivityY = 0.5f;
     float mouseX, mouseY;
 
@@ -12,12 +11,17 @@ public class MouseLook : MonoBehaviour
     float xRotation = 0f;
     public Vector3 targetRotation;
 
+	private void Awake()
+	{
+		Cursor.lockState = CursorLockMode.Confined;
+	}
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
         //Cursor.visible = false;        
     }
+	
     private void Update()
     {
         transform.Rotate(Vector3.up, mouseX * Time.deltaTime);
@@ -40,6 +44,11 @@ public class MouseLook : MonoBehaviour
         mouseX = mouseInput.x * sensitivityX;
         mouseY = mouseInput.y * sensitivityY;
         //Debug.Log(mouseY);
+    }
+
+    private void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void OnDisable()
