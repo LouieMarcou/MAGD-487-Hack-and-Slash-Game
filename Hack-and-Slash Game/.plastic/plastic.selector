@@ -1,4 +1,0 @@
-repository "Medieval Level@cooperjr03@cloud"
-  path "/"
-    smartbranch "/main/test branch" 
-     
