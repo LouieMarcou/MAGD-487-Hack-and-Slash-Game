@@ -15,7 +15,7 @@ C:/Users/Louie Marcou/OneDrive/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hac
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49734
+51257
 Successfully changed project path to: C:/Users/Louie Marcou/OneDrive/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game
 C:/Users/Louie Marcou/OneDrive/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/Louie Marcou/OneDrive/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hac
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 46.29 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 45.87 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.9f1 (ad3870b89536)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/Resources/UnitySubsystems
@@ -63,91 +63,90 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56220
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56748
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.008736 seconds.
+Registered in 0.017638 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 43.14 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 40.77 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.528 seconds
+- Completed reload, in  0.777 seconds
 Domain Reload Profiling:
-	ReloadAssembly (528ms)
-		BeginReloadAssembly (72ms)
+	ReloadAssembly (778ms)
+		BeginReloadAssembly (159ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (355ms)
-			LoadAssemblies (70ms)
+		EndReloadAssembly (399ms)
+			LoadAssemblies (156ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (82ms)
+			SetupTypeCache (120ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (22ms)
-			SetupLoadedEditorAssemblies (206ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (205ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (43ms)
+				RefreshPlugins (41ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (114ms)
-				ProcessInitializeOnLoadMethodAttributes (37ms)
+				ProcessInitializeOnLoadAttributes (117ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004675 seconds.
+Registered in 0.004677 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 49.49 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 40.99 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
 Mono: successfully reloaded assembly
-- Completed reload, in  1.039 seconds
+- Completed reload, in  0.843 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1039ms)
-		BeginReloadAssembly (99ms)
+	ReloadAssembly (844ms)
+		BeginReloadAssembly (95ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (839ms)
-			LoadAssemblies (85ms)
+		EndReloadAssembly (653ms)
+			LoadAssemblies (70ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (195ms)
+			SetupTypeCache (155ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (51ms)
-			SetupLoadedEditorAssemblies (472ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (363ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (50ms)
-				BeforeProcessingInitializeOnLoad (67ms)
-				ProcessInitializeOnLoadAttributes (317ms)
+				RefreshPlugins (41ms)
+				BeforeProcessingInitializeOnLoad (51ms)
+				ProcessInitializeOnLoadAttributes (235ms)
 				ProcessInitializeOnLoadMethodAttributes (20ms)
 				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.20 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2941 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (3.1 MB). Loaded Objects now: 3425.
-Memory consumption went from 181.2 MB to 178.1 MB.
-Total: 5.600800 ms (FindLiveObjects: 0.500300 ms CreateObjectMapping: 0.481100 ms MarkObjects: 3.642300 ms  DeleteObjects: 0.975900 ms)
+Unloading 2232 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (387.9 KB). Loaded Objects now: 2724.
+Memory consumption went from 132.5 MB to 132.1 MB.
+Total: 2.329000 ms (FindLiveObjects: 0.163700 ms CreateObjectMapping: 0.105400 ms MarkObjects: 1.870700 ms  DeleteObjects: 0.188700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,265 +158,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 533290.519707 seconds.
-  path: Assets/Free medieval weapons/Textures/Arrows_Arrows_MetallicSmoothness.png
-  artifactKey: Guid(d3e1f432b8025174a8f990ee91f60053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free medieval weapons/Textures/Arrows_Arrows_MetallicSmoothness.png using Guid(d3e1f432b8025174a8f990ee91f60053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5c60088ecd1529177ae1d7b0e67e43f') in 0.090090 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/ADG_Textures/ground_vol1/ground2/ground2_Metallic.tga
-  artifactKey: Guid(05ec23c4c1d2ad54eaebfd0bf25af051) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ADG_Textures/ground_vol1/ground2/ground2_Metallic.tga using Guid(05ec23c4c1d2ad54eaebfd0bf25af051) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cab8dfc06e10ca66ee25c860dda47f16') in 0.024978 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Props/fi_vil_forge_chain1_medium.fbx
-  artifactKey: Guid(3b8ed63c8b28e9d429d3c62be10a81da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Props/fi_vil_forge_chain1_medium.fbx using Guid(3b8ed63c8b28e9d429d3c62be10a81da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '126314584c015d94f9c8393ecf7e90d8') in 0.166051 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/New Axis Studio/Medieval Flooring/Textures/Medieval Tiles Material Free Height.png
-  artifactKey: Guid(fd97dbf90087fd34ea64e3cbbd33dd36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/New Axis Studio/Medieval Flooring/Textures/Medieval Tiles Material Free Height.png using Guid(fd97dbf90087fd34ea64e3cbbd33dd36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03816e32d6c444d3bdf989446488f3b3') in 0.012819 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield10_a.fbx
-  artifactKey: Guid(ba6ae324482a0804884e83c4c9947aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield10_a.fbx using Guid(ba6ae324482a0804884e83c4c9947aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cefa213beb5f0fefe1a07d64b440095') in 0.024504 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Containers/Crates/fi_vil_container_crate_big_empty02.fbx
-  artifactKey: Guid(7887a08d072cf814aa056c52ba083ff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Containers/Crates/fi_vil_container_crate_big_empty02.fbx using Guid(7887a08d072cf814aa056c52ba083ff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b88e089d353574f71b0f483076b5c05') in 0.020914 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Webs/if_vil_web03.fbx
-  artifactKey: Guid(f45bfbade2669bd459d52a43e918bcb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Webs/if_vil_web03.fbx using Guid(f45bfbade2669bd459d52a43e918bcb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49cb249b7248defd0101def7de78a1ea') in 0.038066 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/NatureStarterKit2/Nature/bush05.prefab
-  artifactKey: Guid(bb660abd3b29d9f44866fd79795dbca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NatureStarterKit2/Nature/bush05.prefab using Guid(bb660abd3b29d9f44866fd79795dbca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b7cc65773d8545dfee063d533146ed3') in 0.405234 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Blades/fi_vil_forge_weaponrack3_full.fbx
-  artifactKey: Guid(ad987d0ddd289d248ad73b3950c86a0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Blades/fi_vil_forge_weaponrack3_full.fbx using Guid(ad987d0ddd289d248ad73b3950c86a0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af34f09b74a2f21344b8ee1c67556b88') in 0.016910 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield09_a.fbx
-  artifactKey: Guid(a1f9b608580fecb4dabafdf0dd6e0c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield09_a.fbx using Guid(a1f9b608580fecb4dabafdf0dd6e0c06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c944255938f8d10f4b290bd35f54a321') in 0.015238 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield08_c.fbx
-  artifactKey: Guid(85dda217aef917f40beb3f16814c210d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield08_c.fbx using Guid(85dda217aef917f40beb3f16814c210d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '897b42d97051d68e53429ab9fb1ff392') in 0.016603 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Containers/Crates/fi_vil_container_crate_big.fbx
-  artifactKey: Guid(ada0c951f2cb46e4fa077a66d58594e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Containers/Crates/fi_vil_container_crate_big.fbx using Guid(ada0c951f2cb46e4fa077a66d58594e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '033f2ab3f286f6953983db60ac16a249') in 0.018000 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/New Axis Studio/Medieval Flooring/Materials/Medieval Tiles Material Free.mat
-  artifactKey: Guid(1a201393dedf1154eac012260de6d7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/New Axis Studio/Medieval Flooring/Materials/Medieval Tiles Material Free.mat using Guid(1a201393dedf1154eac012260de6d7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f9584413031a1894e4950b1d95adcf9') in 0.274213 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield08_b.fbx
-  artifactKey: Guid(733eb5322deaf1948bd60c22f4b6da0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield08_b.fbx using Guid(733eb5322deaf1948bd60c22f4b6da0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1b912aba0542b58fe7f5ce0c97d6534') in 0.021658 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield09_c.fbx
-  artifactKey: Guid(eae5bbef7d27d174486a9442e8000f00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield09_c.fbx using Guid(eae5bbef7d27d174486a9442e8000f00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffb2d0d92684cf2dbe84b706dd801fb7') in 0.023912 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Walls/wall_01/fi_vil_wall01_02.fbx
-  artifactKey: Guid(ca0f26e3217cc1540b8739bfff9c11d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Walls/wall_01/fi_vil_wall01_02.fbx using Guid(ca0f26e3217cc1540b8739bfff9c11d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a574a567ab930d823723fec5aade41a') in 0.017066 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield09_b.fbx
-  artifactKey: Guid(83ceafa25c489494c827e392a0e178d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield09_b.fbx using Guid(83ceafa25c489494c827e392a0e178d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6db7f4eea53062995d7f1f5cb7735ff3') in 0.014276 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield09_d.fbx
-  artifactKey: Guid(0592f0643067b704abf7defa44031fe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield09_d.fbx using Guid(0592f0643067b704abf7defa44031fe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bffaa218128eb22442bb42b6766cff64') in 0.015246 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield03_a.fbx
-  artifactKey: Guid(0783d5fb25accfe47b9d2928e44a615c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield03_a.fbx using Guid(0783d5fb25accfe47b9d2928e44a615c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ad55e6bdaf4acd867eb7d740a7ba65c') in 0.015668 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Containers/Barrels/fi_vil_container_barrel_big_empty.fbx
-  artifactKey: Guid(0ccc65feebde1d04e921f8c1bc592e5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Containers/Barrels/fi_vil_container_barrel_big_empty.fbx using Guid(0ccc65feebde1d04e921f8c1bc592e5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '534584d5b63d3c432193ccd05959a6d9') in 0.022271 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield02_a.fbx
-  artifactKey: Guid(3598c293a58a02d408e302d955546ead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield02_a.fbx using Guid(3598c293a58a02d408e302d955546ead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '847ebffecc121fc2ca6f091518519a18') in 0.016095 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/NatureStarterKit2/Nature/tree03.prefab
-  artifactKey: Guid(4e2dd32c733005a44b50004d673dc653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NatureStarterKit2/Nature/tree03.prefab using Guid(4e2dd32c733005a44b50004d673dc653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bf26c9508f70eb13bd9484976f9e6e7') in 0.025048 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Lighting/WallMounted/fi_vil_light_candle_wall02_lit_b.fbx
-  artifactKey: Guid(b85e90d0118b9824cbabe2302be9ab2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Lighting/WallMounted/fi_vil_light_candle_wall02_lit_b.fbx using Guid(b85e90d0118b9824cbabe2302be9ab2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c918f4094c352aef84e4a4d19f3526aa') in 0.217250 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Walls/wall_01/fi_vil_wall01_04.fbx
-  artifactKey: Guid(539d1b0a478b52f4486fb026e3c8f1b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Walls/wall_01/fi_vil_wall01_04.fbx using Guid(539d1b0a478b52f4486fb026e3c8f1b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c2dea15726a9a002f24b2dec7ff94da') in 0.021443 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield07_a.fbx
-  artifactKey: Guid(4017abc3b395214498a3b7b3d214d863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield07_a.fbx using Guid(4017abc3b395214498a3b7b3d214d863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d8376a8ff6c6bb6a58a6cca0318b780') in 0.016476 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Webs/if_vil_web04.fbx
-  artifactKey: Guid(b49a5eb84e910dc4ba26029a31d569a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Webs/if_vil_web04.fbx using Guid(b49a5eb84e910dc4ba26029a31d569a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f79138b9d8e5d82b00c77a2cb12a0940') in 0.014126 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/NatureStarterKit2/Nature/bush04.prefab
-  artifactKey: Guid(d15b44addf30da74f946086ec0aa993c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NatureStarterKit2/Nature/bush04.prefab using Guid(d15b44addf30da74f946086ec0aa993c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72d2ac1c29803d0467be4689efb33474') in 0.027157 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield01_a.fbx
-  artifactKey: Guid(ac6bacb390da3a34280da46e421d9f82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield01_a.fbx using Guid(ac6bacb390da3a34280da46e421d9f82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be8a3868d19a8907e71ab6930316e5f4') in 0.014532 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield10_d.fbx
-  artifactKey: Guid(bea41d8bcd6e57b4488884255ba5ab54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Shields/fi_vil_shield10_d.fbx using Guid(bea41d8bcd6e57b4488884255ba5ab54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f35e8d7cbb0cb5758e571ccb9fe9f7c') in 0.015763 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/ADG_Textures/ground_vol1/ground1/ground1_Metallic.tga
-  artifactKey: Guid(33d10529b8ef9af47a3d97a1c7419649) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ADG_Textures/ground_vol1/ground1/ground1_Metallic.tga using Guid(33d10529b8ef9af47a3d97a1c7419649) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e576bde345f769558745e5f0a3d14e75') in 0.009481 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.582579 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/fi_vil_forge_workbensh_large1.fbx
-  artifactKey: Guid(0d90dbec6a767294d956856b41dbbd5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/fi_vil_forge_workbensh_large1.fbx using Guid(0d90dbec6a767294d956856b41dbbd5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b334f0467f839ebf4e821951d6dc38b6') in 0.032438 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/fi_vil_forge_anvil.fbx
-  artifactKey: Guid(e73928dcf98647640a4d8bc67715e98f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/fi_vil_forge_anvil.fbx using Guid(e73928dcf98647640a4d8bc67715e98f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc2594dd8772d3868edf5a48d07b65f6') in 0.051529 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Props/fi_vil_forge_stool1.fbx
-  artifactKey: Guid(6fb1aeefaa3a05546b3c3b1a283f60da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Props/fi_vil_forge_stool1.fbx using Guid(6fb1aeefaa3a05546b3c3b1a283f60da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2176650bb9b624ea78ad67c13db3184') in 0.061748 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_SharpeningStones/fi_vil_forge_stone_small1.fbx
-  artifactKey: Guid(8a5c3f2cad5005f40b6ba6ec99c5229d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_SharpeningStones/fi_vil_forge_stone_small1.fbx using Guid(8a5c3f2cad5005f40b6ba6ec99c5229d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31bbaf2ab04b17d8e9fc3e71a2148b1d') in 0.046159 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Containers/Bags/fi_vil_container_bag01_01.fbx
-  artifactKey: Guid(ad8b36c0758e582439243c7e59860973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Props/Containers/Bags/fi_vil_container_bag01_01.fbx using Guid(ad8b36c0758e582439243c7e59860973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c396f9ffe4f6869d6b938adaf6d7824') in 0.031854 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Props/fi_vil_forge_chain1_long.fbx
-  artifactKey: Guid(ff1eb26ef8d478c47a3a1a28ba5cecd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Props/fi_vil_forge_chain1_long.fbx using Guid(ff1eb26ef8d478c47a3a1a28ba5cecd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2589dac17147badc5c6e39b489a76809') in 0.059346 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Props/fi_vil_forge_tool4.fbx
-  artifactKey: Guid(18fff624235237b4eaca6d9678595fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Props/fi_vil_forge_tool4.fbx using Guid(18fff624235237b4eaca6d9678595fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cae28e3796fe575af405d15a59a1cd69') in 0.048585 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/fi_vil_forge_forge3.fbx
-  artifactKey: Guid(1f1ebc40320b24c4188eb1dc3aacd446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/fi_vil_forge_forge3.fbx using Guid(1f1ebc40320b24c4188eb1dc3aacd446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c403f626218c4c2c6b3618560710b7dc') in 0.019828 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.836908 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Props/fi_vil_forge_scrap04.fbx
-  artifactKey: Guid(2fcea7935f3bf6f4b9f521f38dff7deb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Props/fi_vil_forge_scrap04.fbx using Guid(2fcea7935f3bf6f4b9f521f38dff7deb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c07781d42d8b6cd62e198509a107752f') in 0.023280 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Props/fi_vil_forge_chain3_1,5m.fbx
-  artifactKey: Guid(dfa1c6a04ac66044eb55eeb94dbb5b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Meshes/Forge/Forge_Props/fi_vil_forge_chain3_1,5m.fbx using Guid(dfa1c6a04ac66044eb55eeb94dbb5b9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16d93fc27e65bce89118b3e977623030') in 0.024318 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 15.437970 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Prefabs/Props/Lighting/Standing/fi_vil_light_candle_holder04_lit.prefab
-  artifactKey: Guid(6423b6a6b80004e498392a10b68fb590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Prefabs/Props/Lighting/Standing/fi_vil_light_candle_holder04_lit.prefab using Guid(6423b6a6b80004e498392a10b68fb590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de1dccbc41454ff8cc787986548682fc') in 1.060463 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Standard Assets/Effects/LightCookies/Textures/FlashlightIrregularCookie.tif
-  artifactKey: Guid(641bb2dce818a8a499b537a1963889ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Standard Assets/Effects/LightCookies/Textures/FlashlightIrregularCookie.tif using Guid(641bb2dce818a8a499b537a1963889ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '102f24a0b2f024667f030e87433ac1df') in 0.052009 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Textures/fi_village_lighting_hd.tga
-  artifactKey: Guid(91b188e2faf62cd489899b106acc158d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DForge/Fantasy_Interiors/Villages_&_Towns/Textures/fi_village_lighting_hd.tga using Guid(91b188e2faf62cd489899b106acc158d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9804e57a8026095614d252ec32350482') in 0.069715 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
