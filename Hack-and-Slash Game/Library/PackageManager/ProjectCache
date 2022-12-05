@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638057749131244719
-    m_Hash: 1145361858
+      ticks: 638057768180013326
+    m_Hash: 2594869687
   m_LockFileStatus:
     m_FilePath: C:/Users/Louie Marcou/OneDrive/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash
       Game/Packages/packages-lock.json
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638057749131424223
-    m_Hash: 258785992
+      ticks: 638057768180023298
+    m_Hash: 3591990037
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

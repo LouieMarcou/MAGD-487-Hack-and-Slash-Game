@@ -57,53 +57,53 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemies\EnemyBase.cs" />
-    <Compile Include="Assets\playerMovement.cs" />
-    <Compile Include="Assets\Scripts\Player\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Special\Dash.cs" />
-    <Compile Include="Assets\navMeshScript.cs" />
-    <Compile Include="Assets\Scripts\Collectable\HealthDrop.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyManager.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
+    <Compile Include="Assets\Scripts\Collectable\HealthDrop.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\WeaponSpeedIncrease.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponBase.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\PlayerUpgradeBase.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\WeaponBuff.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Player Upgrades\PlayerFlatStatIncrease.cs" />
+    <Compile Include="Assets\Scripts\EnemyObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\UpgradeButton.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\BowDoubleShot.cs" />
+    <Compile Include="Assets\Scripts\Enemies\WaveData.cs" />
+    <Compile Include="Assets\Scripts\Score.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Bow.cs" />
+    <Compile Include="Assets\Scripts\Upgrades\UpgradePanelManager.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Sword.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\playerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\PauseMenu.cs" />
+    <Compile Include="Assets\navMeshScript.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\AxeChargeAttack.cs" />
     <Compile Include="Assets\Scripts\Upgrades\UpgradeData.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Upgrades\UpgradeManager.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\Lifesteal.cs" />
     <Compile Include="Assets\Scripts\Enemies\Set.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Special\Thorns.cs" />
     <Compile Include="Assets\characterController.cs" />
-    <Compile Include="Assets\Scripts\Upgrades\PlayerUpgradeBase.cs" />
-    <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\WeaponBuff.cs" />
-    <Compile Include="Assets\Scripts\Upgrades\Player Upgrades\PlayerFlatStatIncrease.cs" />
-    <Compile Include="Assets\Scripts\EnemyObjectPool.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponData.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Weapons.cs" />
-    <Compile Include="Assets\Scripts\Upgrades\UpgradeButton.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\FlatAttackIncrease.cs" />
     <Compile Include="Assets\Scripts\Weapons\Axe.cs" />
     <Compile Include="Assets\Scripts\Weapons\Arrow.cs" />
-    <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\BowDoubleShot.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\WeaponUpgrade.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Player Upgrades\PlayerSpeedIncrease.cs" />
     <Compile Include="Assets\Scripts\CollisionDetection.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
-    <Compile Include="Assets\Scripts\Enemies\WaveData.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLookVersion2.cs" />
-    <Compile Include="Assets\Scripts\Score.cs" />
-    <Compile Include="Assets\Scripts\Weapons\Bow.cs" />
     <Compile Include="Assets\Scripts\Collectable\Item.cs" />
-    <Compile Include="Assets\Scripts\Upgrades\UpgradePanelManager.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Special\CritcalStrike.cs" />
     <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Weapons\Sword.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Player Upgrades\PlayerHealthRegenIncrease.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyData.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -776,14 +776,17 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
@@ -808,9 +811,6 @@
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
