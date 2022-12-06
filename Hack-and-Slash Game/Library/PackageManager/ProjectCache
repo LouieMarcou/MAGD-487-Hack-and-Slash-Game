@@ -6,7 +6,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638059542320000000
+      ticks: 638059568280000000
     m_Hash: 244063755
   m_LockFileStatus:
     m_FilePath: /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash
@@ -15,7 +15,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638059542320000000
+      ticks: 638059568280000000
     m_Hash: 1802148953
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
