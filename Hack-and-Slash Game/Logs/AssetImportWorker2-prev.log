@@ -1,0 +1,396 @@
+Unity Editor version:    2021.3.9f1 (ad3870b89536)
+Branch:                  2021.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 12.6.1 (Build 21G217)
+Darwin version:          21.6.0
+Architecture:            x86_64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+/Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+52342
+Successfully changed project path to: /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game
+/Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 66.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.9f1 (ad3870b89536)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+iMac preferred device: AMD Radeon Pro 575X (high power)
+Metal devices available: 1
+0: AMD Radeon Pro 575X (high power)
+Using device AMD Radeon Pro 575X (high power)
+Initializing Metal device caps: AMD Radeon Pro 575X
+Shader 'Hidden/FXAA Preset 2': fallback shader 'Hidden/FXAA II' not found
+Shader 'Hidden/FXAA Preset 3': fallback shader 'Hidden/FXAA II' not found
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56919
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.002250 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 46.13 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.834 seconds
+Domain Reload Profiling:
+	ReloadAssembly (835ms)
+		BeginReloadAssembly (146ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (474ms)
+			LoadAssemblies (147ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (122ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (273ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (99ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (46ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (86ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001154 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0x7fd867c92400 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd86c34ba00 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.Csg.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd870198000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd87023f000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd86fe9b000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd867ca2e00 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.Poly2Tri.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd869eb8c00 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.KdTree.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd8650f3c00 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.TerrainTools.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd8705d3000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd869ebe800 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd867caaa00 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.Stl.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd87064a000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd867ca7c00 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 41.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.192 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1193ms)
+		BeginReloadAssembly (206ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (126ms)
+		EndReloadAssembly (876ms)
+			LoadAssemblies (79ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (216ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (479ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (42ms)
+				BeforeProcessingInitializeOnLoad (52ms)
+				ProcessInitializeOnLoadAttributes (338ms)
+				ProcessInitializeOnLoadMethodAttributes (22ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Toon/Lit Outline': fallback shader 'Toon/Lit' not found
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.62 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2937 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (4.0 MB). Loaded Objects now: 3412.
+Memory consumption went from 291.4 MB to 287.4 MB.
+Total: 3.988886 ms (FindLiveObjects: 0.230208 ms CreateObjectMapping: 0.134981 ms MarkObjects: 2.578774 ms  DeleteObjects: 1.044259 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 24927.694576 seconds.
+  path: Assets/Terrain/NewLayer 3.terrainlayer
+  artifactKey: Guid(320415ff4c4d4bf4eb47d663408242c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/NewLayer 3.terrainlayer using Guid(320415ff4c4d4bf4eb47d663408242c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4424d6874a5d309c558e61e6f315ebfa') in 0.135162 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Terrain/castleInside.terrainlayer
+  artifactKey: Guid(d3313cd4cac09d44f84a28471978693a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/castleInside.terrainlayer using Guid(d3313cd4cac09d44f84a28471978693a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36988685a216b25ba1e4ef7f1dd25549') in 0.010305 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Terrain/Terrain_0_0_599a7997-347f-4bac-91e6-eff6eb92fbaf.asset
+  artifactKey: Guid(9ba73a2a7dac1104cb7eafccaa1d4e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/Terrain_0_0_599a7997-347f-4bac-91e6-eff6eb92fbaf.asset using Guid(9ba73a2a7dac1104cb7eafccaa1d4e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3d66196df2cb0c3b2fd76ead6efce11') in 0.074430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Terrain/mud.terrainlayer
+  artifactKey: Guid(2fa3f3bbfe70b674ab371e26d54822e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/mud.terrainlayer using Guid(2fa3f3bbfe70b674ab371e26d54822e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49b666a55dbfd31bef271f33929c4f9c') in 0.009514 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Terrain/Terrain_0_0_a1dba097-bd0b-45ae-a558-6fb5b97844bc.asset
+  artifactKey: Guid(1f7d224dd7914f8428d38a05b4819415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/Terrain_0_0_a1dba097-bd0b-45ae-a558-6fb5b97844bc.asset using Guid(1f7d224dd7914f8428d38a05b4819415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e12e05bb1ec179b11cf7626dbd16e14') in 0.045969 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/Terrain/dirt2.terrainlayer
+  artifactKey: Guid(a7134185d9cbe7b46bff96f66d21616b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/dirt2.terrainlayer using Guid(a7134185d9cbe7b46bff96f66d21616b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bbfe95531b4f7b5f482a0567d3ca85e') in 0.004021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Terrain/dirt.terrainlayer
+  artifactKey: Guid(90fb1ae6ba0ebb547b7a499b88e5303c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/dirt.terrainlayer using Guid(90fb1ae6ba0ebb547b7a499b88e5303c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fee2b1ea4843de8356a50adff550cf2f') in 0.003216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Terrain/Terrain_0_0_96dd25e2-6fb1-4238-831d-2d9f90d81b6d.asset
+  artifactKey: Guid(9144a98a974fbd14698f8be1663378be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/Terrain_0_0_96dd25e2-6fb1-4238-831d-2d9f90d81b6d.asset using Guid(9144a98a974fbd14698f8be1663378be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebe3576fc96fa5dccb02bab88b50e368') in 0.004713 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001272 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0x7fd8692b5000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd86934e400 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.Csg.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd8561f0000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd856297000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd8562cb000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd8671df200 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.Poly2Tri.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd867202000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.KdTree.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd867202000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.TerrainTools.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd856636000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd867214200 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd86721de00 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.ProBuilder.Stl.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd8566ad000 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.TerrainTools.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0x7fd86721ee00 doesn't match image /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Library/ScriptAssemblies/Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.035 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1035ms)
+		BeginReloadAssembly (130ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (789ms)
+			LoadAssemblies (75ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (202ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (424ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (31ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (42ms)
+				ProcessInitializeOnLoadAttributes (323ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.21 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2763 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (4.1 MB). Loaded Objects now: 3424.
+Memory consumption went from 293.8 MB to 289.7 MB.
+Total: 4.657119 ms (FindLiveObjects: 0.252634 ms CreateObjectMapping: 0.202762 ms MarkObjects: 3.111990 ms  DeleteObjects: 1.088858 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 122.661549 seconds.
+  path: Assets/NatureStarterKit2/Textures/ground02.tga
+  artifactKey: Guid(3e8f839d23c8c7f42b81fc76f0dbeb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureStarterKit2/Textures/ground02.tga using Guid(3e8f839d23c8c7f42b81fc76f0dbeb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0299872eff239bee12629ee150a735cb') in 0.812058 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 76.375786 seconds.
+  path: Assets/Standard Assets/Environment/TerrainAssets/SurfaceTextures/MudRockyAlbedoSpecular.bmp
+  artifactKey: Guid(ef5c51cfa2ce46043a41a376b560c525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/TerrainAssets/SurfaceTextures/MudRockyAlbedoSpecular.bmp using Guid(ef5c51cfa2ce46043a41a376b560c525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5c9b5fe7499e3d0a7cdc59758a14b2a') in 0.744878 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.988072 seconds.
+  path: Assets/Scriptable Objects/Player/Player.asset
+  artifactKey: Guid(2ce39e33c7d1e4258a99be1191b64d25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Player/Player.asset using Guid(2ce39e33c7d1e4258a99be1191b64d25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1024ba8e3be8c51dc283a89e5dda2d1b') in 0.014678 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.802593 seconds.
+  path: Assets/Scriptable Objects/Upgrades/IncreaseWeaponHitBox.asset
+  artifactKey: Guid(9eb875916259cab4283796c495fde93c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Upgrades/IncreaseWeaponHitBox.asset using Guid(9eb875916259cab4283796c495fde93c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3417357e20105e91ae6a149fb48f86c2') in 0.008853 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.512258 seconds.
+  path: Assets/Scriptable Objects/Upgrades/Player
+  artifactKey: Guid(b5acc2328b732c94f9be3e5fe17de3a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Upgrades/Player using Guid(b5acc2328b732c94f9be3e5fe17de3a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a91df495da3c0c49e85788398eecef63') in 0.006045 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.069679 seconds.
+  path: Assets/Scriptable Objects/Upgrades/Player/Player Flat Stat Increase.asset
+  artifactKey: Guid(7f369793d0bd040bd9a6d636bb3c2c1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Upgrades/Player/Player Flat Stat Increase.asset using Guid(7f369793d0bd040bd9a6d636bb3c2c1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '086a5a2f1fd4e37bdaa515b24c800b7c') in 0.002285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Scriptable Objects/Upgrades/Player/Speed Increase.asset
+  artifactKey: Guid(f78e3668322e7fc40ae75f025557b2ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scriptable Objects/Upgrades/Player/Speed Increase.asset using Guid(f78e3668322e7fc40ae75f025557b2ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be4e221928bbaaf745994c1f450e75a') in 0.002070 seconds 
