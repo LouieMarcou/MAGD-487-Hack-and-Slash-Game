@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7309451578098084615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7309451578098084614}
+  - component: {fileID: 7309451578098084617}
+  - component: {fileID: 7309451578098084616}
+  - component: {fileID: 7309451578098084619}
+  - component: {fileID: 7309451578098084618}
+  - component: {fileID: 7309451578098084621}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7309451578098084614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309451578098084615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7309451578098084617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309451578098084615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221539f7b6ec5da42937767b3d781d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
+  chooseWeaponPanel: {fileID: 0}
+  weaponObjectsContainer: {fileID: 0}
+  startingWeapon: {fileID: 11400000, guid: 2d23b7d8f55c24a258d7c760b01909d0, type: 2}
+  avalibleWeapons:
+  - {fileID: 11400000, guid: 69c711bf1a4e20543b06833c604cfd9f, type: 2}
+  - {fileID: 11400000, guid: 2d23b7d8f55c24a258d7c760b01909d0, type: 2}
+  - {fileID: 11400000, guid: ad52ed0bad7024d3f986793a0e217b18, type: 2}
+--- !u!114 &7309451578098084616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309451578098084615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb7831196af879048b5d9a96ddf79b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sets:
+  - {fileID: 11400000, guid: f2f35cf8da5a050458caa78d360bc5e0, type: 2}
+  - {fileID: 11400000, guid: ff21fb4bc58013644a81d9cd72ab59a5, type: 2}
+  currentSet: {fileID: 0}
+  waves:
+  - {fileID: 11400000, guid: a62d8bdc042979e44a3e2bd529c0039d, type: 2}
+  - {fileID: 11400000, guid: b1c37fc01a277ff4ca5f1803ddcccd24, type: 2}
+  - {fileID: 11400000, guid: c578e970cdbe844af9dadf0173d001c6, type: 2}
+  - {fileID: 11400000, guid: c5ceff64d6a324ba395c9a2b1c6667c7, type: 2}
+  currentWave: {fileID: 0}
+  waveText: {fileID: 0}
+  upgradeManager: {fileID: 7309451578098084619}
+  restTimerText: {fileID: 0}
+  totalEnmiesKilled: 0
+  Enemies:
+  - {fileID: 11400000, guid: 1bdee8dab35054aeab496d8bfc2ddd1c, type: 2}
+  - {fileID: 11400000, guid: 66e0a6e6690b8f4469b3007a6f02f600, type: 2}
+  - {fileID: 11400000, guid: c33fabc7e72404d2faf2c5438cc55b0b, type: 2}
+  - {fileID: 11400000, guid: 9a1a8d4eb45b64a1baaebf5d6205249d, type: 2}
+--- !u!114 &7309451578098084619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309451578098084615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb92316adb9eac4ea611a13ee3d079f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  upgradePanel: {fileID: 7309451578098084618}
+  upgradeObjectsContainer: {fileID: 0}
+  avalibleUpgrades: []
+--- !u!114 &7309451578098084618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309451578098084615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f7ca335064b944bb23ff3d62b70c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 0}
+  upgradeButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  upgradeManager: {fileID: 7309451578098084619}
+  player: {fileID: 0}
+  enemyManager: {fileID: 7309451578098084616}
+--- !u!114 &7309451578098084621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7309451578098084615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74ca661f6af06546b11e13fe6ef1c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 0}
+  player: {fileID: 0}
+  endgamePanel: {fileID: 0}
+  winLossText: {fileID: 0}
+  timeText: {fileID: 0}
+  enemiesKilledText: {fileID: 0}
+  numUpgradesText: {fileID: 0}
+  damageTakenText: {fileID: 0}
+  scoreText: {fileID: 0}
