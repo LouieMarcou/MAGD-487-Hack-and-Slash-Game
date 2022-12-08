@@ -1,23 +1,30 @@
+Unity Editor version:    2021.3.9f1 (ad3870b89536)
+Branch:                  2021.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 12.6.1 (Build 21G217)
+Darwin version:          21.6.0
+Architecture:            x86_64
+Running under Rosetta:   NO
+Available memory:        16384 MB
 Using pre-set license
-Built from '2021.3/staging' branch; Version is '2021.3.9f1 (ad3870b89536) revision 11352176'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'en' Physical Memory: 32656 MB
-BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+Pro License: YES
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.3.9f1\Editor\Unity.exe
+/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/MacOS/Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/Louie Marcou/OneDrive/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game
+/Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-57312
-Successfully changed project path to: C:/Users/Louie Marcou/OneDrive/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game
-C:/Users/Louie Marcou/OneDrive/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game
+51060
+Successfully changed project path to: /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game
+/Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,138 +54,147 @@ C:/Users/Louie Marcou/OneDrive/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hac
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 48.41 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 47.58 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.9f1 (ad3870b89536)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Louie Marcou/OneDrive/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Assets
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/marcoulw14/Documents/GitHub/MAGD-487-Hack-and-Slash-Game/Hack-and-Slash Game/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
-    Vendor:   NVIDIA
-    VRAM:     12142 MB
-    Driver:   31.0.15.1694
+iMac preferred device: AMD Radeon Pro 575X (high power)
+Metal devices available: 1
+0: AMD Radeon Pro 575X (high power)
+Using device AMD Radeon Pro 575X (high power)
+Initializing Metal device caps: AMD Radeon Pro 575X
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56112
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56785
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.009322 seconds.
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.9f1/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.001589 seconds.
+Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 43.85 ms, found 2 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 45.98 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.562 seconds
+- Completed reload, in  0.693 seconds
 Domain Reload Profiling:
-	ReloadAssembly (563ms)
-		BeginReloadAssembly (73ms)
+	ReloadAssembly (696ms)
+		BeginReloadAssembly (130ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (390ms)
-			LoadAssemblies (70ms)
+		EndReloadAssembly (459ms)
+			LoadAssemblies (132ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (102ms)
+			SetupTypeCache (118ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (217ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (260ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (44ms)
+				InitializePlatformSupportModulesInManaged (78ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (46ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (119ms)
-				ProcessInitializeOnLoadMethodAttributes (43ms)
+				ProcessInitializeOnLoadAttributes (86ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007253 seconds.
+Registered in 0.001686 seconds.
 Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 45.02 ms, found 2 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 42.66 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.071 seconds
+- Completed reload, in  1.155 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1072ms)
-		BeginReloadAssembly (116ms)
+	ReloadAssembly (1156ms)
+		BeginReloadAssembly (200ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (839ms)
-			LoadAssemblies (84ms)
+			CreateAndSetChildDomain (127ms)
+		EndReloadAssembly (849ms)
+			LoadAssemblies (66ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (199ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (474ms)
+			SetupTypeCache (206ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (475ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (24ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (45ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (324ms)
-				ProcessInitializeOnLoadMethodAttributes (23ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				RefreshPlugins (43ms)
+				BeforeProcessingInitializeOnLoad (51ms)
+				ProcessInitializeOnLoadAttributes (335ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Failed to load shader (instanceID 690, GUID d8e82664aa8686642a424c88ab10164a)
+Failed to load shader (instanceID 734, GUID e2d80ab5510d94ba09cf45aca5ce34c3)
+Failed to load shader (instanceID 716, GUID cd939d1adbd7a468b92022df3a8a4486)
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2939 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 60 unused Assets / (3.2 MB). Loaded Objects now: 3423.
-Memory consumption went from 180.8 MB to 177.5 MB.
-Total: 3.032100 ms (FindLiveObjects: 0.220600 ms CreateObjectMapping: 0.179100 ms MarkObjects: 2.064200 ms  DeleteObjects: 0.567400 ms)
+Unloading 2830 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 60 unused Assets / (3.3 MB). Loaded Objects now: 3316.
+Memory consumption went from 295.5 MB to 292.2 MB.
+Total: 3.931123 ms (FindLiveObjects: 0.234974 ms CreateObjectMapping: 0.168873 ms MarkObjects: 2.750465 ms  DeleteObjects: 0.776077 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 876254.306659 seconds.
-  path: Assets/Terrain/castleInside.terrainlayer
-  artifactKey: Guid(d3313cd4cac09d44f84a28471978693a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Terrain/castleInside.terrainlayer using Guid(d3313cd4cac09d44f84a28471978693a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6092b3b4e8b2bf62983356b663511ac') in 0.084742 seconds 
+  Time since last request: 20965.651676 seconds.
+  path: Assets/Mini Map Render Texture.renderTexture
+  artifactKey: Guid(148d2e3096a59c641bf29c28ed2c7e10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mini Map Render Texture.renderTexture using Guid(148d2e3096a59c641bf29c28ed2c7e10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1c8336b4c3c4104957aa86ee8b4cddb') in 0.724607 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Terrain/dirt.terrainlayer
-  artifactKey: Guid(90fb1ae6ba0ebb547b7a499b88e5303c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Terrain/dirt.terrainlayer using Guid(90fb1ae6ba0ebb547b7a499b88e5303c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b8e7663c20cd25b63c22ad37fe3c4f3') in 0.004546 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.152879 seconds.
-  path: Assets/Standard Assets/Environment/TerrainAssets/SurfaceTextures/MudRockyAlbedoSpecular.bmp
-  artifactKey: Guid(ef5c51cfa2ce46043a41a376b560c525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Standard Assets/Environment/TerrainAssets/SurfaceTextures/MudRockyAlbedoSpecular.bmp using Guid(ef5c51cfa2ce46043a41a376b560c525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85d031183707e4115836171ce622f754') in 0.051123 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 151.442665 seconds.
-  path: Assets/_TerrainAutoUpgrade/layer_Terr_Dirt_DiffuseTerr_Dirt_Normal2023054508611406.terrainlayer
-  artifactKey: Guid(e53a0a7f1e91149358f0e18c90221652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_TerrainAutoUpgrade/layer_Terr_Dirt_DiffuseTerr_Dirt_Normal2023054508611406.terrainlayer using Guid(e53a0a7f1e91149358f0e18c90221652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a7015d686f43e71d626e7b3269aedca') in 0.028042 seconds 
+  Time since last request: 0.000074 seconds.
+  path: Assets/playerColor.mat
+  artifactKey: Guid(efde63f1bd3bd984985fe3ca66da3f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/playerColor.mat using Guid(efde63f1bd3bd984985fe3ca66da3f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0138cc7eb44fce7ebac8bbd416d71806') in 0.100506 seconds 

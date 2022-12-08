@@ -15,4 +15,8 @@ MonoBehaviour:
   Name: Set 2
   Waves:
   - {fileID: 11400000, guid: 2662bddeb143b1c40a57464424f63dd8, type: 2}
+  - {fileID: 11400000, guid: 2662bddeb143b1c40a57464424f63dd8, type: 2}
+  - {fileID: 11400000, guid: 2662bddeb143b1c40a57464424f63dd8, type: 2}
+  - {fileID: 11400000, guid: 2662bddeb143b1c40a57464424f63dd8, type: 2}
+  - {fileID: 11400000, guid: 2662bddeb143b1c40a57464424f63dd8, type: 2}
   statModifier: 1.2
