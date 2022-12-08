@@ -358,6 +358,7 @@
 "Assets/Scripts/Enemies/EnemyBase.cs"
 "Assets/Scripts/Enemies/EnemyData.cs"
 "Assets/Scripts/Enemies/EnemyManager.cs"
+"Assets/Scripts/Enemies/EnemyNavMesh.cs"
 "Assets/Scripts/Enemies/Set.cs"
 "Assets/Scripts/Enemies/WaveData.cs"
 "Assets/Scripts/EnemyObjectPool.cs"

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 4158657067635785812}
   - component: {fileID: 3763951523508227644}
   - component: {fileID: 6493683136349532947}
+  - component: {fileID: 8429051936270623401}
+  - component: {fileID: 6070665113872633202}
   m_Layer: 0
   m_Name: Footman
   m_TagString: Enemy
@@ -117,9 +119,11 @@ MonoBehaviour:
     damage: 0
     speed: 0
     timeToAttack: 0
+    armor: 0
   player: {fileID: 0}
   currentHealth: 0
   objectPool: {fileID: 0}
+  enemyManager: {fileID: 0}
 --- !u!54 &6493683136349532947
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -136,3 +140,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!195 &8429051936270623401
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158657067635785813}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &6070665113872633202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158657067635785813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e0aeda23f6c694887fb893354f9dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPositionTransform: {fileID: 0}

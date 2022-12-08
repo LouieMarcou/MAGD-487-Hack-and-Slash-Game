@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Player Upgrades\PlayerHealthRegenIncrease.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyData.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyNavMesh.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

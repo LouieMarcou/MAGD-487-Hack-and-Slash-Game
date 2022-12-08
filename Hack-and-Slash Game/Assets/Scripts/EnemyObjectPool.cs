@@ -6,6 +6,7 @@ public class EnemyObjectPool : ObjectPool
 {
     [SerializeField] private GameObject player;
     [SerializeField] private Vector3 spawnArea;
+    [SerializeField] private List<Vector3> spawnAreas;
 
     public float secondsToSpawn;
     private float timer;
@@ -21,6 +22,7 @@ public class EnemyObjectPool : ObjectPool
     // Start is called before the first frame update
      public override void Start()
     {
+        objectToPool.GetComponent<EnemyNavMesh>().SetPlayerPositionTransform(player.transform);
         pooledObjects = new List<GameObject>();
         GameObject tmp;
 
