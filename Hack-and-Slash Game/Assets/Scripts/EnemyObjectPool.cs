@@ -6,7 +6,7 @@ public class EnemyObjectPool : ObjectPool
 {
     [SerializeField] private GameObject player;
     [SerializeField] private Vector3 spawnArea;
-    [SerializeField] private List<Vector3> spawnAreas;
+    [SerializeField] private List<Transform> spawnAreas;
 
     public float secondsToSpawn;
     private float timer;
@@ -39,6 +39,11 @@ public class EnemyObjectPool : ObjectPool
     void Update()
     {
         transform.position = player.transform.position;
+        if (spawnAreas.Count != 0)
+        {
+            float dist = Vector3.Distance(spawnAreas[0].position, player.transform.position);
+            Debug.Log(dist, gameObject);
+        }
         if (canSpawn && amountOfEnemiesToSpawn > 0)
         {
             timer -= Time.deltaTime;
