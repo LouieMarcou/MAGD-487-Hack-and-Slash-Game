@@ -43,6 +43,7 @@ public class EnemyBase : MonoBehaviour
         {
             //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, enemyData.stats.speed * Time.deltaTime);
             //transform.position = Vector3.Lerp(transform.position, player.transform.position, enemyData.stats.speed * Time.deltaTime);
+            
         }
         else if(currentHealth <= 0)
         {
