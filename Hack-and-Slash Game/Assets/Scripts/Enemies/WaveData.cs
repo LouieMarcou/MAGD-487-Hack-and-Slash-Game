@@ -10,6 +10,9 @@ public class WaveData : ScriptableObject
     public List<int> EnemyAmountForEachType;
     private int TotalEnemies;
     public int KillCount;
+    public bool hasStarted = false;
+    public bool isRunning = false;
+    public bool isOver = false;
 
     public void CalculateTotalEnemies()
     {
@@ -24,9 +27,20 @@ public class WaveData : ScriptableObject
         return TotalEnemies;
     }
 
+    public bool CheckIfWaveIsOver()
+    {
+        if (KillCount == TotalEnemies)
+            return true;
+        else
+            return false;
+    }
+
     void OnDisable()
     {
         TotalEnemies = 0;
         KillCount = 0;
+        hasStarted = false;
+        isRunning = false;
+        isOver = false;
     }
 }

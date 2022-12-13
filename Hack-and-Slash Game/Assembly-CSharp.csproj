@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\Lifesteal.cs" />
     <Compile Include="Assets\Scripts\Enemies\Set.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Special\Thorns.cs" />
+    <Compile Include="Assets\characterController.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponData.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Weapons.cs" />
     <Compile Include="Assets\Scripts\Upgrades\Weapon Upgrades\FlatAttackIncrease.cs" />

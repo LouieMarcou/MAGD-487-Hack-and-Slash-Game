@@ -369,7 +369,7 @@ public class PlayerController : MonoBehaviour
 		if(health>healthMax)
 			health = healthMax;
 		healthBar.value = health;
-		Debug.Log(health);
+		//Debug.Log(health);
 	}
 
     public void AddUpgrade(UpgradeData ud)

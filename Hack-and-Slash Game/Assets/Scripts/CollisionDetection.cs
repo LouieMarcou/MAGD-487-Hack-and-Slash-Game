@@ -46,7 +46,7 @@ public class CollisionDetection : MonoBehaviour
             {
                 //Debug.Log(wp.weaponData.stats.damage);
                 //Debug.Log(wp.gameObject.GetComponent<Sword>().GetLifestealAmount());
-                wp.playerController.AddHealth(damage * wp.gameObject.GetComponent<Sword>().GetLifestealAmount());
+                wp.playerController.AddHealth(modifiedDamage * wp.gameObject.GetComponent<Sword>().GetLifestealAmount());
             }
             wp.HitMarkerCoroutine();
         }

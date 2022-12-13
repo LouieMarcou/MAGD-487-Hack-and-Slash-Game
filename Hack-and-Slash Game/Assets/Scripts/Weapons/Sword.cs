@@ -30,8 +30,8 @@ public class Sword : WeaponBase
             playerController.GetAnimator().SetTrigger("Attack");//transitions to Sword attack 1 animation
             StartCoroutine(AttackCooldown());
         }
-        else
-            Debug.Log("can't attack");
+        //else
+        //    Debug.Log("can't attack");
     }
 
     public override IEnumerator AttackCooldown()

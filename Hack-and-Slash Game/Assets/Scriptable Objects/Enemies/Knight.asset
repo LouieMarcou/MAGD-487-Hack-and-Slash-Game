@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Knight
   stats:
-    health: 30
-    damage: 15
-    speed: 3
+    health: 36
+    damage: 18
+    speed: 8
     timeToAttack: 1
-    armor: 2
+    armor: 2.4
   EnemyBasePrefab: {fileID: 8756739110352464224, guid: e43541b9098fe934381538c3b14b7230, type: 3}

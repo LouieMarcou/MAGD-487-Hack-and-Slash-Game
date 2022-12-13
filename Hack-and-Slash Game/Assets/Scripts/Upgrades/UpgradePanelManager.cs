@@ -28,11 +28,11 @@ public class UpgradePanelManager : MonoBehaviour
 
         for (int i = 0; i < upgradeDatas.Count; i++)
         {
-		if(upgradeDatas[i] != null)
+		    if(upgradeDatas[i] != null)
 			{
-            upgradeButtons[i].gameObject.SetActive(true);
-            //Debug.Log(upgradeButtons[i].gameObject, upgradeButtons[i].gameObject);
-            upgradeButtons[i].Set(upgradeDatas[i]);
+                upgradeButtons[i].gameObject.SetActive(true);
+                //Debug.Log(upgradeButtons[i].gameObject, upgradeButtons[i].gameObject);
+                upgradeButtons[i].Set(upgradeDatas[i]);
 			}
         }
     }
@@ -67,6 +67,7 @@ public class UpgradePanelManager : MonoBehaviour
 
     private void HideButtons()
     {
+        //Debug.Log("went in to hide buttons");
         for (int i = 0; i < upgradeButtons.Count; i++)
         {
             upgradeButtons[i].gameObject.SetActive(false);

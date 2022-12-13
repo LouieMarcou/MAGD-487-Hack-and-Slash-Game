@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Footman
   stats:
-    health: 20
-    damage: 10
-    speed: 10
+    health: 24
+    damage: 12
+    speed: 9
     timeToAttack: 1
-    armor: 1
+    armor: 1.2
   EnemyBasePrefab: {fileID: 4158657067635785813, guid: b30f1b0ca784e4b6fbea6a46acec1100, type: 3}

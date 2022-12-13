@@ -25,11 +25,12 @@ public class EnemyBase : MonoBehaviour
     void Awake()
 	{
 		player = GameObject.Find("Player");
-        SetData(enemyData);
+        
         objectPool = GameObject.Find(enemyData.Name + "ObjectPool").GetComponent<EnemyObjectPool>();
         attackTime = new WaitForSeconds(enemyData.stats.timeToAttack);
         enemyManager = GameObject.Find("Game Manager").GetComponent<EnemyManager>();
         enemyNavMesh = GetComponent<EnemyNavMesh>();
+        SetData(enemyData);
         //Debug.Log(GetObjectPool());
     }
 
@@ -50,6 +51,7 @@ public class EnemyBase : MonoBehaviour
         }
         else if(currentHealth <= 0)
         {
+            //Debug.Log("dead");
             AddToKillCount();
             gameObject.SetActive(false);
             

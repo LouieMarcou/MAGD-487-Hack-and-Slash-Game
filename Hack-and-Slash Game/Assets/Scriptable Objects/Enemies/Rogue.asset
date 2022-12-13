@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Rogue
   stats:
-    health: 15
-    damage: 5
-    speed: 5
+    health: 18
+    damage: 6
+    speed: 10
     timeToAttack: 0.5
+    armor: 0
   EnemyBasePrefab: {fileID: 5490660934420378055, guid: 00ebc55811f4c4e789dd249c0fe13e34, type: 3}

@@ -124,6 +124,7 @@ MonoBehaviour:
   currentHealth: 0
   objectPool: {fileID: 0}
   enemyManager: {fileID: 0}
+  enemyNavMesh: {fileID: 0}
 --- !u!54 &5490660934420378056
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -174,4 +175,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e0aeda23f6c694887fb893354f9dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPositionTransform: {fileID: 0}
+  playerPositionTransform: {fileID: 5619710742736197428, guid: d465eb7e0fb634bbe92434643a02a25f, type: 3}
+  navMeshAgent: {fileID: 7880627736450737738}
