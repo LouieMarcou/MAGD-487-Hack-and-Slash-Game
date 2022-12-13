@@ -20,6 +20,8 @@ public class EnemyBase : MonoBehaviour
 
     public EnemyManager enemyManager;
 
+    public EnemyNavMesh enemyNavMesh;
+
     void Awake()
 	{
 		player = GameObject.Find("Player");
@@ -27,6 +29,7 @@ public class EnemyBase : MonoBehaviour
         objectPool = GameObject.Find(enemyData.Name + "ObjectPool").GetComponent<EnemyObjectPool>();
         attackTime = new WaitForSeconds(enemyData.stats.timeToAttack);
         enemyManager = GameObject.Find("Game Manager").GetComponent<EnemyManager>();
+        enemyNavMesh = GetComponent<EnemyNavMesh>();
         //Debug.Log(GetObjectPool());
     }
 
@@ -66,6 +69,7 @@ public class EnemyBase : MonoBehaviour
         enemyData = ed;
 
         enemyStats = new EnemyStats(ed.stats.health, ed.stats.damage, ed.stats.speed, ed.stats.timeToAttack, ed.stats.armor);
+        enemyNavMesh.navMeshAgent.speed = ed.stats.speed;
     }
 
     //Subtracts damage from player health

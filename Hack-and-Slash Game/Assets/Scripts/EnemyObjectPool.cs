@@ -22,6 +22,7 @@ public class EnemyObjectPool : ObjectPool
     // Start is called before the first frame update
      public override void Start()
     {
+        
         objectToPool.GetComponent<EnemyNavMesh>().SetPlayerPositionTransform(player.transform);
         pooledObjects = new List<GameObject>();
         GameObject tmp;
@@ -39,11 +40,11 @@ public class EnemyObjectPool : ObjectPool
     void Update()
     {
         transform.position = player.transform.position;
-        if (spawnAreas.Count != 0)
-        {
-            float dist = Vector3.Distance(spawnAreas[0].position, player.transform.position);
-            Debug.Log(dist, gameObject);
-        }
+        //if (spawnAreas.Count != 0)
+        //{
+        //    float dist = Vector3.Distance(spawnAreas[0].position, player.transform.position);
+        //    Debug.Log(dist, gameObject);
+        //}
         if (canSpawn && amountOfEnemiesToSpawn > 0)
         {
             timer -= Time.deltaTime;
@@ -62,7 +63,8 @@ public class EnemyObjectPool : ObjectPool
         GameObject tmp;
         Vector3 position = getRandomPosition();
         tmp = GetPooledObject();
-        position += player.transform.position;
+        //Debug.Log(LookForSpawnPoint());
+        position += LookForSpawnPoint().position;
         if (tmp == null)
         {
             //Debug.Log("all enemies are being used");
@@ -104,6 +106,23 @@ public class EnemyObjectPool : ObjectPool
         yield return respawnTime;
         //Debug.Log("3 seconds have passed");
 
+    }
+
+    Transform LookForSpawnPoint()
+    {
+        Transform closestPoint = spawnAreas[0];
+        float dist = Vector3.Distance(spawnAreas[0].position, player.transform.position);
+        foreach (Transform spawn in spawnAreas)
+        {
+            float nextDist = Vector3.Distance(spawn.position, player.transform.position);
+            if(nextDist < dist)
+            {
+                closestPoint = spawn;
+                //Debug.Log(dist, spawn.gameObject);
+            }
+            
+        }
+        return closestPoint;
     }
 
     public void SetCanSpawn(bool ans)

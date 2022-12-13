@@ -79,9 +79,9 @@ public class PlayerController : MonoBehaviour
 		StoreOrginialData(playerData);
         controller = gameObject.GetComponent<CharacterController>();
         controller.enabled = true;
-        currentStamina = staminaMax;
 
         healthMax = health;
+        currentStamina = staminaMax;
         baseSpeed = currentSpeed;
 
         state = PlayerState.walking;
@@ -426,6 +426,10 @@ public class PlayerController : MonoBehaviour
         playerData = pd;
 
         playerStats = new PlayerStats(pd.stats.health, pd.stats.stamina, pd.stats.speed);
+        healthMax = playerStats.health;
+        staminaMax = playerStats.stamina;
+        baseSpeed = playerStats.speed;
+        currentSpeed = playerStats.speed;
     }
 
     public void IncreaseHealthRegen(float amount)

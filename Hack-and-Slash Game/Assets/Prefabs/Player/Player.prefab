@@ -351,7 +351,7 @@ Transform:
   m_GameObject: {fileID: 5619710742736197431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5619710742427604162}
@@ -522,6 +522,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 39a82715-6e8f-41d2-974a-5cf02f513db5
     m_ActionName: Player/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32071ac1-688e-4e55-9cee-bbc7a920f035
+    m_ActionName: Player/Dash[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -544,15 +548,21 @@ MonoBehaviour:
     health: 0
     stamina: 0
     speed: 0
-  playerSpeed: 10
+  currentSpeed: 5
+  baseSpeed: 0
+  sprintSpeed: 5
   look: {fileID: 5619710742736197430}
   health: 100
   healthBar: {fileID: 0}
+  currentStamina: 0
+  staminaMax: 100
   staminaBar: {fileID: 0}
   Weapon: {fileID: 0}
   animator: {fileID: 5619710742736197423}
   weaponObjectsContainer: {fileID: 0}
   upgrades: []
+  score: {fileID: 0}
+  state: 0
 --- !u!114 &5619710742736197430
 MonoBehaviour:
   m_ObjectHideFlags: 0
